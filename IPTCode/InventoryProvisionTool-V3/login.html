@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>ITP</title>
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+</head>
+
+<body class="fix-header">
+	<div id="wrapper">
+		<nav class="navbar navbar-static-top">
+			<div class="navbar-header">
+				<div class="pull-right menu-icon">
+					<span></span><span></span><span></span>
+				</div>
+				<div class="top-left-part">
+					<img src="./img/elanco.svg" />
+				</div>
+				<div class="tagline col-xs-4 hidden-sm">Inventory Provision Tool</div>
+				<div class="user-info pull-right">
+					<span></span>
+				</div>
+			</div>
+		</nav>
+		<div class="sidebar">
+			<a href="inventory-review.html" class="link">Inventory Review</a>
+			<a href="system-parameters.html" class="link">System Parameters</a>
+			<a href="system-admin.html" class="link">System Admin</a>
+			<a href="" class="link">Sign Out</a>
+		</div>
+		<main class="main login-page">
+			<div class="container-fluid">
+
+				<div class="white-box form-box shadow">
+					<form>
+						<img src="./img/user.png" />
+						<div class="form-group">
+							<label for="exampleInputEmail1">Email address</label>
+							<input type="email" class="form-control" id="exampleInputEmail1"
+								aria-describedby="emailHelp" placeholder="Enter email">
+							<!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+						</div>
+						<div class="form-group">
+							<label for="exampleInputPassword1">Password</label>
+							<input type="password" class="form-control" id="exampleInputPassword1"
+								placeholder="Password">
+						</div>
+						<div class="form-group form-check">
+							<input type="checkbox" class="form-check-input" id="exampleCheck1">
+							<label class="form-check-label" for="exampleCheck1">Check me out</label>
+						</div>
+						<button type="button" class="btn btn-block">Submit</button>
+					</form>
+				</div>
+
+			</div>
+		</main>
+		<footer class="footer text-center">Version: 2.3 Deployed: 14-May-2018 Instance: Test - TST1221</footer>
+	</div>
+	<div class="disabled"></div>
+	<script src="./js/jquery.min.js"></script>
+	<script src="./js/bootstrap.min.js"></script>
+	<script>
+		$(document).ready(function () {
+			$('.menu-icon').click(function () {
+				$('.fix-header').toggleClass('menu');
+			});
+		});
+	</script>
+</body>
+
+</html>

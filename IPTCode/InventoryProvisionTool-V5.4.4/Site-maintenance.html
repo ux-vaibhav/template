@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Inventory Provision Tool (IPT)</title>
+	<link href="css/vendor/bootstrap.min.css" rel="stylesheet">
+	<link href="css/vendor/multiselect.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+</head>
+
+<body class="fix-header">
+	<div>
+		<nav class="navbar navbar-static-top blue-navbar">
+			<div class="navbar-header flex">
+				<div class="top-left-part ">
+					<a class="d-flex" href="inventory-review.html">
+						<img src="./img/elanco.svg" />
+						<div class="title-text">Inventory Provision <span> Tool (IPT)</span>
+						</div>
+					</a>
+				</div>
+				<div class="top-right-part">
+					<div id="menu-icon" class="pull-right menu-icon"> <span></span><span></span><span></span>
+					</div>
+					<div class="user-info pull-right"> <span>Welcome, Vijay Bansal</span>
+						<div class="user-info-box">
+							<ul class="list-unstyled">
+								<li><a href="javascript:void(0)">Site: Liverpool</a>
+								</li>
+								<li><a href="javascript:void(0)">Role: SA, WA, DS</a>
+								</li>
+								<li><a href="javascript:void(0)">Instance: Development (DEV1221)</a>
+								</li>
+								<li><a href="javascript:void(0)">Sign out</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</nav>
+		<div class="sidebar">
+			<ul class="list-unstyled">
+				<li> <a href="javascript:void(0)" class="link">Inventory Review</a>
+					<div class="sub-nav">
+						<div class="cls"> <span></span>
+							<span></span>
+							<span></span>
+						</div>
+						<div class="page-link"><a href="inventory-review.html" class="link">Inventory Review</a>
+						</div>
+						<ul class="list-unstyled">
+							<li><a href="frequency-review-2.html" class="link">Frequency Review</a>
+							</li>
+							<li><a href="slow-moving-inventory.html" class="link">Slow moving Inventory</a>
+							</li>
+							<li> <a href="manual-fail.html" class="link"> Manual Fail </a>
+							</li>
+							<li> <a href="javascript:void(0)" class="link">Upload</a>
+								<div class="sub-nav">
+									<div class="cls"> <span></span>
+										<span></span>
+										<span></span>
+									</div>
+									<div class="page-link"><a href="javascript:void(0)" class="link">Upload</a>
+									</div>
+									<ul class="list-unstyled">
+										<li><a href="" class="link">B/F Previous</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li><span class="link" data-toggle="modal" data-target="#email-box">Email</span>
+							</li>
+						</ul>
+					</div>
+				</li>
+				<li> <a href="javascript:void(0)" class="link">System Parameters</a>
+					<div class="sub-nav">
+						<div class="cls pull-right"> <span></span>
+							<span></span>
+							<span></span>
+						</div>
+						<div class="page-link"><a href="javascript:void(0)" class="link">System Parameters</a>
+						</div>
+						<ul class="list-unstyled">
+							<li><a href="frequency-review.html" class="link">Frequency Review</a>
+							</li>
+							<li><a href="Controllers.html" class="link">Controllers</a>
+							</li>
+							<li><a href="Category.html" class="link">Categories</a>
+							</li>
+							<li><a href="financial-filters.html" class="link">Financial Filters
+                           </a>
+							</li>
+							<li><a href="Business-Area.html" class="link">Business Area
+                           </a>
+							</li>
+							<li><a href="Plant.html" class="link">Plants
+                           </a>
+							</li>
+							<li><a href="Inv-review-tables.html" class="link">Inv Review Tables
+                           </a>
+							</li>
+							<li><a href="Access-roles.html" class="link">Access Roles
+                           </a>
+							</li>
+							<li><a href="Class-accounts.html" class="link">Class Accounts
+                           </a>
+							</li>
+							<li><a href="Materials.html" class="link">Materials
+                           </a>
+							</li>
+						</ul>
+					</div>
+				</li>
+				<li> <a href="javascript:void(0)" class="link">System Admin</a>
+					<div class="sub-nav">
+						<div class="cls pull-right"> <span></span>
+							<span></span>
+							<span></span>
+						</div>
+						<div class="page-link"><a href="system-admin.html" class="link">System Admin</a>
+						</div>
+						<ul class="list-unstyled">
+							<li><a href="Site-maintenance.html" class="link">Site Maintenance</a>
+							</li>
+							<li><a href="Assign-security.html" class="link">Assign Security</a>
+							</li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<main class="main">
+			<div class="container-fluid">
+				<div class="col-md-12 white-box rel-box">
+					<h2>
+						Site Maintenance
+                  </h2>
+					<form>
+						<div class="form-group">
+							<div class="row">
+								<div class="col-xs-3">
+									<input type="text" id="table-search" class="form-control" placeholder="Search" />
+								</div>
+								<button class="btn tablezoom pull-right" type="button">Table Magnify
+									<img src="./img/magnifying-glass.png" />
+								</button>
+							</div>
+						</div>
+					</form>
+					<div class="table-responsive">
+						<table class="table" id="ControllerTable">
+							<thead>
+								<tr>
+									<th>Site</th>
+									<th>Code</th>
+									<th>Review Cycle</th>
+									<th>Last Updated</th>
+									<th>By</th>
+									</tr>
+							</thead>
+								<tbody>
+								<tr>
+								<td>Liverpool</td>
+								<td></td>
+								<td>Monthly</td>
+								<td>16-Jun-2020 08:37</td>
+								<td>Haynes Rajwadi</td>
+								</tr>
+								<tr>
+								
+								<td>PEI</td>
+								<td></td>
+								<td>Monthly</td>
+								<td>10-Jun-2019 11:16</td>
+								<td>Anju Joshi</td>
+								</tr>
+								<tr>
+								
+								<td>Sligo</td>
+								<td></td>
+								<td>Monthly</td>
+								<td>10-Jun-2019 11:16</td>
+								<td>Jeffrey Mark</td>
+								</tr>
+								<tr>
+								
+								<td>Test</td>
+								<td></td>
+								<td>Monthly</td>
+								<td>10-Jun-2019 08:14</td>
+								<td>Anju Joshi</td>
+								</tr>
+								<tr>
+								
+								<td>XYZ</td>
+								<td>123</td>
+								<td>Monthly</td>
+								<td>25-Feb-2020 11:16</td>
+								<td>Shakir Ali</td>
+								</tr>
+								<tr>
+								
+								<td>testsite</td>
+								<td>123</td>
+								<td>Monthly</td>
+								<td>26-Apr-2020 17:50</td>
+								<td>Srikanth Tekumudi</td>
+								</tr>
+								</tbody>
+								</table>
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer class="footer text-center d-flex">
+			<div>Copyright © 2020 Elanco. All rights reserved.</div>
+			<div>Version: 2.3 Deployed: 14-May-2018</div>
+		</footer>
+	</div>
+	<div class="disabled"></div>
+	<script src="./js/jquery.min.js"></script>
+	<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.js"></script>
+	<script src="./js/bootstrap.min.js"></script>
+	<script src="./js/parsley.min.js"></script>
+	<script src="./js/main.js"></script>
+	<script>
+		$('#ControllerTable').DataTable({
+		         "sDom":"ltipr",
+		         "lengthChange": false
+		      });
+		      var oTable = $('#ControllerTable').DataTable(); 
+		      $('#table-search').keyup(function(){
+		      oTable.search($(this).val(), true, false).draw() ;
+		})
+	</script>
+</body>
+
+</html>

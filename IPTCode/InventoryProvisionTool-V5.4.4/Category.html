@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Inventory Provision Tool (IPT)</title>
+	<link href="css/vendor/bootstrap.min.css" rel="stylesheet">
+	<link href="css/vendor/multiselect.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+</head>
+
+<body class="fix-header">
+	<div>
+		<nav class="navbar navbar-static-top blue-navbar">
+			<div class="navbar-header flex">
+				<div class="top-left-part ">
+					<a class="d-flex" href="inventory-review.html">
+						<img src="./img/elanco.svg" />
+						<div class="title-text">Inventory Provision <span> Tool (IPT)</span>
+						</div>
+					</a>
+				</div>
+				<div class="top-right-part">
+					<div id="menu-icon" class="pull-right menu-icon"> <span></span><span></span><span></span>
+					</div>
+					<div class="user-info pull-right"> <span>Welcome, Vijay Bansal</span>
+						<div class="user-info-box">
+							<ul class="list-unstyled">
+								<li><a href="javascript:void(0)">Site: Liverpool</a>
+								</li>
+								<li><a href="javascript:void(0)">Role: SA, WA, DS</a>
+								</li>
+								<li><a href="javascript:void(0)">Instance: Development (DEV1221)</a>
+								</li>
+								<li><a href="javascript:void(0)">Sign out</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</nav>
+		<div class="sidebar">
+			<ul class="list-unstyled">
+				<li> <a href="javascript:void(0)" class="link">Inventory Review</a>
+					<div class="sub-nav">
+						<div class="cls"> <span></span>
+							<span></span>
+							<span></span>
+						</div>
+						<div class="page-link"><a href="inventory-review.html" class="link">Inventory Review</a>
+						</div>
+						<ul class="list-unstyled">
+							<li><a href="frequency-review-2.html" class="link">Frequency Review</a>
+							</li>
+							<li><a href="slow-moving-inventory.html" class="link">Slow moving Inventory</a>
+							</li>
+							<li> <a href="manual-fail.html" class="link"> Manual Fail </a>
+							</li>
+							<li> <a href="javascript:void(0)" class="link">Upload</a>
+								<div class="sub-nav">
+									<div class="cls"> <span></span>
+										<span></span>
+										<span></span>
+									</div>
+									<div class="page-link"><a href="javascript:void(0)" class="link">Upload</a>
+									</div>
+									<ul class="list-unstyled">
+										<li><a href="" class="link">B/F Previous</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li><span class="link" data-toggle="modal" data-target="#email-box">Email</span>
+							</li>
+						</ul>
+					</div>
+				</li>
+				<li> <a href="javascript:void(0)" class="link">System Parameters</a>
+					<div class="sub-nav">
+						<div class="cls pull-right"> <span></span>
+							<span></span>
+							<span></span>
+						</div>
+						<div class="page-link"><a href="javascript:void(0)" class="link">System Parameters</a>
+						</div>
+						<ul class="list-unstyled">
+							<li><a href="frequency-review.html" class="link">Frequency Review</a>
+							</li>
+							<li><a href="Controllers.html" class="link">Controllers</a>
+							</li>
+							<li><a href="Category.html" class="link">Categories</a>
+							</li>
+							<li><a href="financial-filters.html" class="link">Financial Filters
+                           </a>
+							</li>
+							<li><a href="Business-Area.html" class="link">Business Area
+                           </a>
+							</li>
+							<li><a href="Plant.html" class="link">Plants
+                           </a>
+							</li>
+							<li><a href="Inv-review-tables.html" class="link">Inv Review Tables
+                           </a>
+							</li>
+							<li><a href="Access-roles.html" class="link">Access Roles
+                           </a>
+							</li>
+							<li><a href="Class-accounts.html" class="link">Class Accounts
+                           </a>
+							</li>
+							<li><a href="Materials.html" class="link">Materials
+                           </a>
+							</li>
+						</ul>
+					</div>
+				</li>
+				<li> <a href="javascript:void(0)" class="link">System Admin</a>
+					<div class="sub-nav">
+						<div class="cls pull-right"> <span></span>
+							<span></span>
+							<span></span>
+						</div>
+						<div class="page-link"><a href="system-admin.html" class="link">System Admin</a>
+						</div>
+						<ul class="list-unstyled">
+							<li><a href="Site-maintenance.html" class="link">Site Maintenance</a>
+							</li>
+							<li><a href="Assign-security.html" class="link">Assign Security</a>
+							</li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<main class="main">
+			<div class="container-fluid">
+				<div class="col-md-12 white-box rel-box">
+					<h2>
+                     Category
+                  </h2>
+					<form>
+						<div class="form-group">
+							<div class="row">
+								<div class="col-xs-3">
+									<input type="text" id="table-search" class="form-control" placeholder="Search" />
+								</div>
+								<button class="btn tablezoom pull-right" type="button">Table Magnify
+									<img src="./img/magnifying-glass.png" />
+								</button>
+							</div>
+						</div>
+					</form>
+					<div class="table-responsive">
+						<table class="table" id="ControllerTable">
+							<thead>
+								<tr>
+									<th style="width:200px">Category</th>
+									<th style="width:200px">Description</th>
+									<th>Reviews</th>
+									<th>Owner</th>
+									<th>Name</th>
+									<th>Last Updated</th>
+									<th>By</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Customer Services</td>
+									<td>Find/organise a market to take the product. Update comment/Category as appropriate</td>
+									<td>2</td>
+									<td>YD79087</td>
+									<td>DIMECH AARON</td>
+									<td>15-Feb-2017 07:42</td>
+									<td>Jeffrey Mark</td>
+								</tr>
+								<tr>
+									<td>Destruction</td>
+									<td>Scheduler Buyer to make sure material follows destruction route promptly</td>
+									<td>2</td>
+									<td>YD79087</td>
+									<td>Aaron Dimech</td>
+									<td>15-Feb-2017 08:08</td>
+									<td>Jeffrey Mark</td>
+								</tr>
+								<tr>
+									<td>Inventory review meeting to discuss</td>
+									<td>Items which are problematic/controversial/need urgent actioning, put against this category to be discussed during next inventory meeting</td>
+									<td>1</td>
+									<td>YD79087</td>
+									<td>DIMECH AARON</td>
+									<td>15-Feb-2017 07:42</td>
+									<td>Jeffrey Mark</td>
+								</tr>
+								<tr>
+									<td>MS&amp;T to advise</td>
+									<td>MS&amp;T to advise on this particular batch and whether we can make use of it or needs to be destroyed</td>
+									<td>2</td>
+									<td>YD79087</td>
+									<td>DIMECH AARON</td>
+									<td>15-Feb-2017 07:42</td>
+									<td>AARON DIMECH</td>
+								</tr>
+								<tr>
+									<td>OK</td>
+									<td>No further action needed for review purposes, until next round of review</td>
+									<td>1</td>
+									<td>YD79087</td>
+									<td>DIMECH AARON</td>
+									<td>15-Feb-2017 07:43</td>
+									<td>Jeffrey Mark</td>
+								</tr>
+								<tr>
+									<td>Process Flow Team</td>
+									<td>Action material as per comment. Can material be re-processes/used? Update comment/Category accordingly</td>
+									<td>1</td>
+									<td>YD79087</td>
+									<td>DIMECH AARON</td>
+									<td>15-Feb-2017 07:42</td>
+									<td>AARON DIMECH</td>
+								</tr>
+								<tr>
+									<td>Quality</td>
+									<td>Q personnel review and action items in this category. Update Category/comment as appropriate</td>
+									<td>2</td>
+									<td>YD79087</td>
+									<td>DIMECH AARON</td>
+									<td>15-Feb-2017 07:42</td>
+									<td>Jeffrey Mark</td>
+								</tr>
+								<tr>
+									<td>Rationalisation Project</td>
+									<td>Product scheduled to be deleted as part of the on-going rationalisation project.</td>
+									<td>1</td>
+									<td>C196529</td>
+									<td>CARINS ANGELA</td>
+									<td>15-Feb-2017 07:42</td>
+									<td>ANGELA CARINS</td>
+								</tr>
+								<tr>
+									<td>Return to Vendor</td>
+									<td>Scheduler buyers work with procurement to promptly return this material to vendors. Update category/comment</td>
+									<td>1</td>
+									<td>YD79087</td>
+									<td>DIMECH AARON</td>
+									<td>15-Feb-2017 07:42</td>
+									<td>AARON DIMECH</td>
+								</tr>
+								<tr>
+									<td>Scheduling for future production</td>
+									<td>Schedulers to consume in subsequent production runs. Update Category/comment as appropriate</td>
+									<td>1</td>
+									<td>YD79087</td>
+									<td>Aaron Dimech</td>
+									<td>15-Feb-2017 08:09</td>
+									<td>Jeffrey Mark</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer class="footer text-center d-flex">
+			<div>Copyright © 2020 Elanco. All rights reserved.</div>
+			<div>Version: 2.3 Deployed: 14-May-2018</div>
+		</footer>
+	</div>
+	<div class="disabled"></div>
+	<script src="./js/jquery.min.js"></script>
+	<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.js"></script>
+	<script src="./js/bootstrap.min.js"></script>
+	<script src="./js/parsley.min.js"></script>
+	<script src="./js/main.js"></script>
+	<script>
+		$('#ControllerTable').DataTable({
+		         "sDom":"ltipr",
+		         "lengthChange": false
+		      });
+		      var oTable = $('#ControllerTable').DataTable(); 
+		      $('#table-search').keyup(function(){
+		      oTable.search($(this).val(), true, false).draw() ;
+		})
+	</script>
+</body>
+
+</html>

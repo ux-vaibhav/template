@@ -1,0 +1,57 @@
+.grad .navbar-header {
+	background: linear-gradient(130deg, #0072ce, #6ab176)
+}
+.grad .menu-icon span {
+	background: #fff
+}
+.grad .user-info span {
+	color: #fff
+}
+.grad .tagline {
+	color: #fff
+}
+.grad .btn {
+	background: #6ab176;
+	border-radius: 1px
+}
+.grad .filter h3 {
+	background: #fff;
+	padding-left: 0;
+	padding-right: 0
+}
+.grad .white-box {
+	border-radius: 0;
+	padding: 15px
+}
+.grad ul.nav.nav-tabs.flex.two-tabs li a {
+	border-radius: 0
+}
+.grad .footer {
+	position: relative
+}
+.grad .footer:before {
+	background: linear-gradient(130deg, #0072ce, #6ab176);
+	height: 5px;
+	width: 100%;
+	content: "";
+	bottom: 0;
+	z-index: 1;
+	position: absolute;
+	left: 0;
+	right: 0
+}
+.grad .detail-form.active {
+	border-radius: 0
+}
+.grad .multiselect-wrapper .multiselect-list.active {
+	min-width: 172px
+}
+.grad.menu .sidebar {
+	background: rgba(101, 174, 121, 0.96)
+}
+.grad .sub-nav.active {
+	background: #3e979a
+}
+.grad .sub-nav.active .sub-nav.active {
+	background: #2b8baa
+}

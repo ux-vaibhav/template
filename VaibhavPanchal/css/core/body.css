@@ -1,0 +1,36 @@
+body {
+    background-image: url(../../img/bg.png);
+    font-family: Fira Sans, sans-serif;
+    overflow-x: hidden;
+    color: #004267;
+    font-weight: 300;
+    /* background-color: rgb(237, 241, 245); */
+    background-color:  rgb(229, 233, 236);
+    margin: 0px;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
+    font-weight:400;
+  }
+  
+  .main {
+    position: inherit;
+    min-height: calc(100vh - 130px);
+    padding: 0px;
+    transition: 0.2s all ease;
+    margin-top: 70px;
+    padding-top: 15px;
+  }
+
+  body.fix-header:before {
+    position: fixed;
+    content: "";
+    height: 800px;
+    width: 800px;
+    background: #EE2E5D;
+    bottom: -400px;
+    right: -400px;
+    transform: rotate(-45deg);
+    opacity: 0.05;
+    z-index: -1;
+}

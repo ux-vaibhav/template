@@ -1,0 +1,13 @@
+@import url(https://fonts.googleapis.com/css2?family=Fira+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap);
+@import './core/body.css';
+@import './core/grad.css';
+@import './core/input.css';
+@import './core/header.css';
+@import './core/footer.css';
+@import './core/menu.css';
+@import './core/table.css';
+@import './core/common.css';
+@import './core/accordion.css';
+@import './core/multiselect.css';
+@import './core/inventory-review.css';
+

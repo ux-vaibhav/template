@@ -1,0 +1,1185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Inventory Provision Tool (IPT)</title>
+	<link href="css/vendor/bootstrap.min.css" rel="stylesheet">
+	<link href="css/vendor/multiselect.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+</head>
+
+<body class="fix-header">
+	<div>
+		<nav class="navbar navbar-static-top blue-navbar">
+			<div class="navbar-header flex">
+				<div class="top-left-part ">
+					<a class="d-flex" href="inventory-review.html">
+						<div class="title-text">Vaibhav</div>
+					</a>
+				</div>
+				<div class="top-right-part">
+					<div id="menu-icon" class="pull-right menu-icon"> <span></span><span></span><span></span>
+					</div>
+					<div class="user-info pull-right select-site"> 
+						<div class="info-open"><span>Liverpool</span> <i class="info-icon"></i></div>
+					<div class="user-info-box">
+						<ul class="list-unstyled">
+								<li>
+									<select>
+										<option>Liverpool</option>
+											<option>Indonesia</option>
+									</select>
+								</li>
+							<li><a href="javascript:void(0)">Role: SA, WA, DS</a>
+							</li>
+							<li><a href="javascript:void(0)">Instance: Development (DEV1221)</a>
+							</li>
+							<li><a href="javascript:void(0)">Sign out</a>
+							</li>
+						</ul>
+					</div>
+					</div>
+					<div class="user-info pull-right"> <span>Welcome, Vijay Bansal</span>
+						
+					</div>
+				</div>
+			</div>
+		</nav>
+		<div class="sidebar">
+			<ul class="list-unstyled">
+				<li> <a href="javascript:void(0)" class="link">Inventory Review</a>
+					<div class="sub-nav">
+						<div class="cls"> <span></span>
+							<span></span>
+							<span></span>
+						</div>
+						<div class="page-link"><a href="inventory-review.html" class="link">Inventory Review</a>
+						</div>
+						<ul class="list-unstyled">
+							<li><a href="frequency-review-2.html" class="link">Frequency Review</a>
+							</li>
+							<li><a href="slow-moving-inventory.html" class="link">Slow moving Inventory</a>
+							</li>
+							<li> <a href="manual-fail.html" class="link"> Manual Fail </a>
+							</li>
+							<li> <a href="javascript:void(0)" class="link">Upload</a>
+								<div class="sub-nav">
+									<div class="cls"> <span></span>
+										<span></span>
+										<span></span>
+									</div>
+									<div class="page-link"><a href="javascript:void(0)" class="link">Upload</a>
+									</div>
+									<ul class="list-unstyled">
+										<li><a href="" class="link">B/F Previous</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li><span class="link" data-toggle="modal" data-target="#email-box">Email</span></li>
+						</ul>
+					</div>
+				</li>
+				<li> <a href="javascript:void(0)" class="link">System Parameters</a>
+					<div class="sub-nav">
+						<div class="cls pull-right"> <span></span>
+							<span></span>
+							<span></span>
+						</div>
+						<div class="page-link"><a href="javascript:void(0)" class="link">System Parameters</a>
+						</div>
+						<ul class="list-unstyled">
+							<li><a href="frequency-review.html" class="link">Frequency Review</a>
+							</li>
+							<li><a href="Controllers.html" class="link">Controllers</a>
+							</li>
+							<li><a href="Category.html" class="link">Categories</a>
+							</li>
+							<li><a href="financial-filters.html" class="link">Financial Filters
+                           </a>
+							</li>
+							<li><a href="Business-Area.html" class="link">Business Area
+                           </a>
+							</li>
+							<li><a href="Plant.html" class="link">Plants
+                           </a>
+							</li>
+							<li><a href="Inv-review-tables.html" class="link">Inv Review Tables
+                           </a>
+							</li>
+							<li><a href="Access-roles.html" class="link">Access Roles
+                           </a>
+							</li>
+							<li><a href="Class-accounts.html" class="link">Class Accounts
+                           </a>
+							</li>
+							<li><a href="Materials.html" class="link">Materials
+                           </a>
+							</li>
+						</ul>
+					</div>
+				</li>
+				<li> <a href="javascript:void(0)" class="link">System Admin</a>
+					<div class="sub-nav">
+						<div class="cls pull-right"> <span></span>
+							<span></span>
+							<span></span>
+						</div>
+						<div class="page-link"><a href="system-admin.html" class="link">System Admin</a>
+						</div>
+						<ul class="list-unstyled">
+							<li><a href="Site-maintenance.html" class="link">Site Maintenance</a>
+							</li>
+							<li><a href="Assign-security.html" class="link">Assign Security</a>
+							</li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<main class="main">
+			<div class="container-fluid">
+				<div class="col-xs-12 col-sm-3 col-md-2 pdl-0 filter-container">
+					<div class="filter white-box">
+						<form class="filterform">
+							<div class="d-flex">
+								<div class="form-group">
+									<label for="exampleFormControlSelect1">Period</label>
+									<select class="form-control" id="exampleFormControlSelect1">
+										<option>1</option>
+										<option>2</option>
+										<option>3</option>
+										<option>4</option>
+										<option>5</option>
+									</select>
+								</div>
+								<div class="form-group">
+									<label for="exampleFormControlSelect1">Year</label>
+									<select class="form-control" id="exampleFormControlSelect1">										
+										<option value="2016">2016</option>
+										<option value="2017">2017</option>
+										<option value="2018">2018</option>
+										<option value="2019">2019</option>
+										<option value="2020" selected>2020</option>
+									</select>
+								</div>
+							</div>
+						</form>
+						<div class="accordion" id="accordionExample">
+							<div class="card">
+								<div class="card-header" id="heading1">
+									<h3 class="mb-0">
+                                 <button class="btn-link" type="button" data-toggle="collapse"
+                                    data-target="#collaps1" aria-expanded="true"
+                                    aria-controls="collaps1">
+                                    Review Status (28) <i class="arrow"><span></span><span></span></i>
+                                 </button>
+                              </h3>
+								</div>
+								<div id="collaps1" class="collapse" aria-labelledby="heading1" data-parent="#accordionExample">
+									<div class="card-body">
+										<ul class="list-unstyled">
+											<li class="red">Not reviewed HVI (0)</li>
+											<li class="red">Not reviewed LVI (0)</li>
+											<li class="blue">No Primary review (0)</li>
+											<li class="yellow">
+												<input id="ctl00_WebUserControl_primaryCheckBox" type="checkbox" name="ctl00$WebUserControl$primaryCheckBox" checked="checked">No Functional review (9)</li>
+											<li class="green">
+												<input id="ctl00_WebUserControl_primaryCheckBox" type="checkbox" name="ctl00$WebUserControl$primaryCheckBox" checked="checked">Review complete (19)</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="card">
+								<div class="card-header" id="heading2">
+									<h3 class="mb-0">
+                                 <button class="btn-link" type="button" data-toggle="collapse"
+                                    data-target="#collapse2" aria-expanded="true"
+                                    aria-controls="collapse2">
+                                 Ledger Type Filter 
+                                 <i class="arrow"><span></span><span></span></i>
+                                 </button>
+                              </h3>
+								</div>
+								<div id="collapse2" class="collapse" aria-labelledby="heading2" data-parent="#accordionExample">
+									<div class="card-body">
+										<select id='LedgerTypeFilter' class="multibox" multiple>
+											<option value='Finished stock' selected>Finished stock</option>
+											<option value='Semi Finished' selected>Semi Finished</option>
+											<option value='Rows' selected>Rows</option>
+											<option value='Packaging' selected>Packaging</option>
+											<option value='Stores Items' selected>Stores Items</option>
+										</select>
+									</div>
+								</div>
+							</div>
+							<div class="card">
+								<div class="card-header" id="heading3">
+									<h3 class="mb-0">
+                                 <button class="btn-link" type="button" data-toggle="collapse"
+                                    data-target="#collapse3" aria-expanded="true"
+                                    aria-controls="collapse3">
+                                 Business Area 
+                                 <i class="arrow"><span></span><span></span></i>
+                                 </button>
+                              </h3>
+								</div>
+								<div id="collapse3" class="collapse" aria-labelledby="heading3" data-parent="#accordionExample">
+									<div class="card-body">
+										<select id='BusinessArea' class="multibox" multiple>
+											<option value='BusinessArea' selected>BusinessArea</option>
+											<option value='Semi Finished' selected>Semi Finished</option>
+											<option value='Rows' selected>Rows</option>
+											<option value='Packaging' selected>Packaging</option>
+											<option value='Stores Items' selected>Stores Items</option>
+										</select>
+									</div>
+								</div>
+							</div>
+							<div class="card">
+								<div class="card-header" id="heading4">
+									<h3 class="mb-0">
+                                 <button class="btn-link" type="button" data-toggle="collapse"
+                                    data-target="#collapse4" aria-expanded="true"
+                                    aria-controls="collapse4">
+                                 Plant
+                                 <i class="arrow"><span></span><span></span></i>
+                                 </button>
+                              </h3>
+								</div>
+								<div id="collapse4" class="collapse" aria-labelledby="heading4" data-parent="#accordionExample">
+									<div class="card-body">
+										<select id='Plant' class="multibox" multiple>
+											<option value='0751' selected>0751</option>
+											<option value='0752' selected>0752</option>
+											<option value='0753' selected>0753</option>
+											<option value='0754' selected>0754</option>
+										</select>
+									</div>
+								</div>
+							</div>
+							<div class="card">
+								<div class="card-header" id="heading5">
+									<h3 class="mb-0">
+                                 <button class="btn-link" type="button" data-toggle="collapse"
+                                    data-target="#collapse5" aria-expanded="true"
+                                    aria-controls="collapse5">
+                                 Filter applied
+                                 <i class="arrow"><span></span><span></span></i>
+                                 </button>
+                              </h3>
+								</div>
+								<div id="collapse5" class="collapse" aria-labelledby="heading5" data-parent="#accordionExample">
+									<div class="card-body">
+										<select id='Filterapplied' class="multibox" multiple>
+											<option value='Expired' selected>Expired</option>
+											<option value='Close to Expired' selected>Close to Expired</option>
+											<option value='Block' selected>Block</option>
+										</select>
+									</div>
+								</div>
+							</div>
+							<div class="card">
+								<div class="card-header" id="heading6">
+									<h3 class="mb-0">
+                                 <button class="btn-link" type="button" data-toggle="collapse"
+                                    data-target="#collapse6" aria-expanded="true"
+                                    aria-controls="collapse6">
+                                 Controllers
+                                 <i class="arrow"><span></span><span></span></i>
+                                 </button>
+                              </h3>
+								</div>
+								<div id="collapse6" class="collapse" aria-labelledby="heading6" data-parent="#accordionExample">
+									<div class="card-body">
+										<select id='Controllers' class="multibox" multiple>
+											<option value='A72' selected>A72</option>
+											<option value='A73' selected>A73</option>
+											<option value='A74' selected>A74</option>
+											<option value='A75' selected>A75</option>
+										</select>
+									</div>
+								</div>
+							</div>
+							<div class="card">
+								<div class="card-header" id="heading7">
+									<h3 class="mb-0">
+                                 <button class="btn-link" type="button" data-toggle="collapse"
+                                    data-target="#collapse7" aria-expanded="true"
+                                    aria-controls="collapse7">
+                                 SKU
+                                 <i class="arrow"><span></span><span></span></i>
+                                 </button>
+                              </h3>
+								</div>
+								<div id="collapse7" class="collapse" aria-labelledby="heading7" data-parent="#accordionExample">
+									<div class="card-body">
+										<select id='sku' class="multibox" multiple>
+											<option value='Finished stock' >sku</option>
+											<option value='Semi Finished' >Semi Finished</option>
+
+											<option value='Semi Finished' >Semi Finished 2</option>
+
+											<option value='Semi Finished' >Semi Finished 3</option>
+
+											<option value='Semi Finished' >Semi Finished 4</option>
+
+											<option value='Rows' >Rows</option>
+											<option value='Packaging' >Packaging</option>
+											<option value='Stores Items' >Stores Items</option>
+										</select>
+									</div>
+								</div>
+							</div>
+							<div class="card">
+								<div class="card-header" id="heading8">
+									<h3 class="mb-0">
+                                 <button class="btn-link" type="button" data-toggle="collapse"
+                                    data-target="#collapse8" aria-expanded="true"
+                                    aria-controls="collapse8">
+                                 Batch
+                                 <i class="arrow"><span></span><span></span></i>
+                                 </button>
+                              </h3>
+								</div>
+								<div id="collapse8" class="collapse" aria-labelledby="heading8" data-parent="#accordionExample">
+									<div class="card-body">
+										<select id='BatchID' class="multibox" multiple>
+											<option value='Finished stock' selected>Batch ID</option>
+											<option value='Semi Finished' selected>Semi Finished</option>
+											<option value='Rows' selected>Rows</option>
+											<option value='Packaging' selected>Packaging</option>
+											<option value='Stores Items' selected>Stores Items</option>
+										</select>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-9 col-md-10 rel-box tab-container" >
+					<div class="row">
+						<div class="white-box table-action-panel">
+							<ul class="list-unstyled flex">
+								<li>
+									<button class="assign-box btn" data-toggle="modal" data-target="#assign-box">Assign Controller</button>
+								</li>
+								<li>
+									<button class="btn">Start Review</button>
+								</li>
+								<li>
+									<button class="btn">Close Review</button>
+								</li>
+								<li>
+									<button class="btn">Re-Open Review</button>
+								</li>
+								<li>
+									<button class="btn">Delete Review</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="row">
+						<ul class="nav nav-tabs flex two-tabs" role="tablist">
+							<li class="active">
+								<a href="#maintenance" role="tab" data-toggle="tab">
+									<h3 class="box-title">Inventory Review (Higher value items)</h3>
+								</a>
+							</li>
+							<li>
+								<a href="#review" role="tab" data-toggle="tab">
+									<h3 class="box-title">Inventory Maintenance (Low value items)</h3>
+								</a>
+							</li>
+						</ul>
+						<div class="tab-content">
+							<div class="tab-pane fade active in" id="maintenance">
+								<div class="row">
+									<div class="col-sm-12">
+										<div class="white-box">
+											<div class="table-responsive">
+												<table class="table" style="width: 1400px;">
+													<thead>
+														<tr>
+															<th><span>Action</span>
+															</th>
+															<!-- <th><span style="width:230px;display:block;">Name</span> -->
+															<!-- </th> -->
+															<th>Plant</th>
+															<th>Ctlr</th>
+															<th>Type</th>
+															<th>Material</th>
+															<th>Description</th>
+															<th>INV_LOCATION</th>
+															<th>Batch</th>
+															<th>Expiry/Creation</th>
+															<th>Last Moved</th>															
+															<th>Days</th>
+															<th>Status</th>
+															<th>Qty</th>
+															<th>UOM</th>
+															<th>Value</th>
+															<th>Currency</th>
+															<th>Cat. Assigned</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td class="table-action">
+																<button class="btn select red" data-cat="red" type="button">
+																	<img src="img/right-arrow.png" class="right-arrow" />
+																</button>
+															</td>
+															<!-- <td>Primary &amp; Functional review confirmed</td> -->
+															<td>0751</td>
+															<td>A72</td>
+															<td>HALB</td>
+															<td>QA540Q02</td>
+															<td>FLUBENDAZOLE</td>
+															<td>18</td>
+															<td>C767796</td>
+															<td>13-Jul-19</td>
+															<td>02-May-17</td>
+															<td>155</td>
+															<td>Q</td>
+															<td>6.0000</td>
+															<td>KG</td>
+															<td>31971.50</td>
+															<td>GBP</td>
+															<td>OK</td>
+														</tr>
+														<tr>
+															<td class="table-action">
+																<button class="btn select blue" data-cat="blue" type="button">
+																	<img src="img/right-arrow.png" class="right-arrow" />
+																</button>
+															</td>
+															<!-- <td>Primary &amp; Functional review confirmed</td> -->
+															<td>0751</td>
+															<td>A72</td>
+															<td>HALB</td>
+															<td>QA540H01</td>
+															<td>ENILCONAZOLE</td>
+															<td>100</td>
+															<td>C460185</td>
+															<td>17-Jan-18</td>
+															<td>07-Mar-16</td>
+															<td>576</td>
+															<td>U</td>
+															<td>7.0000</td>
+															<td>KG</td>
+															<td>73891.28</td>
+															<td>GBP</td>
+															<td>OK</td>
+														</tr>
+														<tr>
+															<td class="table-action">
+																<button class="btn select yellow" data-cat="yellow" type="button">
+																	<img src="img/right-arrow.png" class="right-arrow" />
+																</button>
+															</td>
+															<!-- <td>Primary &amp; Functional review confirmed</td> -->
+															<td>0751</td>
+															<td>A52</td>
+															<td>HALB</td>
+															<td>QA540N25KFF</td>
+															<td>PARCONAZOLE (GEEL)</td>
+															<td>100</td>
+															<td>C459339</td>
+															<td>09-Jan-20</td>
+															<td>16-May-16</td>
+															<td>506</td>
+															<td>U</td>
+															<td>12.0000</td>
+															<td>KG</td>
+															<td>96009.25</td>
+															<td>GBP</td>
+															<td>OK</td>
+														</tr>
+														<tr>
+															<td class="table-action">
+																<button class="btn select green" data-cat="green" type="button">
+																	<img src="img/right-arrow.png" class="right-arrow" />
+																</button>
+															</td>
+															<!-- <td>Primary &amp; Functional review confirmed</td> -->
+															<td>0751</td>
+															<td>A72</td>
+															<td>HALB</td>
+															<td>QA540H01</td>
+															<td>ENILCONAZOLE</td>
+															<td>100</td>
+															<td>C456367</td>
+															<td>17-Jan-18</td>
+															<td>07-Mar-16</td>
+															<td>576</td>
+															<td>U</td>
+															<td>7.0000</td>
+															<td>KG</td>
+															<td>73915.49</td>
+															<td>GBP</td>
+															<td>OK</td>
+														</tr>
+														<tr>
+															<td class="table-action">
+																<button class="btn select red" data-cat="red" type="button">
+																	<img src="img/right-arrow.png" class="right-arrow" />
+																</button>
+															</td>
+															<!-- <td>Primary &amp; Functional review confirmed</td> -->
+															<td>0751</td>
+															<td>A72</td>
+															<td>HALB</td>
+															<td>QA540H01</td>
+															<td>ENILCONAZOLE</td>
+															<td>100</td>
+															<td>C454462</td>
+															<td>16-Jan-18</td>
+															<td>07-Mar-16</td>
+															<td>576</td>
+															<td>U</td>
+															<td>7.0000</td>
+															<td>KG</td>
+															<td>73780.61</td>
+															<td>GBP</td>
+															<td>OK</td>
+														</tr>
+														<tr>
+															<td class="table-action">
+																<button class="btn select red" data-cat="red" type="button">
+																	<img src="img/right-arrow.png" class="right-arrow" />
+																</button>
+															</td>
+															<!-- <td>Primary &amp; Functional review confirmed</td> -->
+															<td>0751</td>
+															<td>A72</td>
+															<td>HALB</td>
+															<td>QA540H01</td>
+															<td>ENILCONAZOLE</td>
+															<td>100</td>
+															<td>C453981</td>
+															<td>15-Jan-18</td>
+															<td>27-Jun-17</td>
+															<td>99</td>
+															<td>U</td>
+															<td>6.371</td>
+															<td>KG</td>
+															<td>31403.90</td>
+															<td>GBP</td>
+															<td>OK</td>
+														</tr>
+														<tr>
+															<td class="table-action">
+																<button class="btn select yellow" data-cat="yellow" type="button">
+																	<img src="img/right-arrow.png" class="right-arrow" />
+																</button>
+															</td>
+															<!-- <td>Primary &amp; Functional review confirmed</td> -->
+															<td>0751</td>
+															<td>A72</td>
+															<td>HALB</td>
+															<td>QA540H01</td>
+															<td>ENILCONAZOLE</td>
+															<td>100</td>
+															<td>C453796</td>
+															<td>14-Jan-18</td>
+															<td>07-Mar-16</td>
+															<td>576</td>
+															<td>U</td>
+															<td>7.0000</td>
+															<td>KG</td>
+															<td>75474.92</td>
+															<td>GBP</td>
+															<td>OK</td>
+														</tr>
+														<tr>
+															<td class="table-action">
+																<button class="btn select green" data-cat="green" type="button">
+																	<img src="img/right-arrow.png" class="right-arrow" />
+																</button>
+															</td>
+															<!-- <td>Primary &amp; Functional review confirmed</td> -->
+															<td>0751</td>
+															<td>A72</td>
+															<td>HALB</td>
+															<td>QA540H01EX</td>
+															<td>ENILCONAZOLE METAL VESSEL</td>
+															<td>100</td>
+															<td>C451701</td>
+															<td>19-Jan-18</td>
+															<td>07-Mar-16</td>
+															<td>576</td>
+															<td>U</td>
+															<td>7.0000</td>
+															<td>KG</td>
+															<td>63665.11</td>
+															<td>GBP</td>
+															<td>OK</td>
+														</tr>
+														<tr>
+															<td class="table-action">
+																<button class="btn select" type="button">
+																	<img src="img/right-arrow.png" class="right-arrow" />
+																</button>
+															</td>
+															<!-- <td>Primary &amp; Functional review confirmed</td> -->
+															<td>0751</td>
+															<td>A72</td>
+															<td>HALB</td>
+															<td>QA540H01</td>
+															<td>ENILCONAZOLE</td>
+															<td>100</td>
+															<td>C449664</td>
+															<td>11-Jan-18</td>
+															<td>07-Mar-16</td>
+															<td>576</td>
+															<td>U</td>
+															<td>7.0000</td>
+															<td>KG</td>
+															<td>67453.000</td>
+															<td>GBP</td>
+															<td>OK</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="tab-pane fade" id="review">
+								<div class="row">
+									<div class="col-sm-12">
+										<div class="white-box">
+											<div class="table-responsive">
+												<table class="table" style="width: 1400px;">
+													<thead>
+														<tr>
+															<th><span>Action</span>
+															</th>
+															<!-- <th><span style="width:230px;display:block;">Name</span> -->
+															<!-- </th> -->
+															<th>Plant</th>
+															<th>Ctlr</th>
+															<th>Type</th>
+															<th>Material</th>
+															<th>Description</th>
+															<th>INV_LOCATION</th>
+															<th>Batch</th>
+															<th>Expiry/Creation</th>
+															<th>Last Moved</th>															
+															<th>Days</th>
+															<th>Status</th>
+															<th>Qty</th>
+															<th>UOM</th>
+															<th>Value</th>
+															<th>Currency</th>
+															<th>Cat. Assigned</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td class="table-action">
+																<button class="btn select" type="button">
+																	<img src="img/right-arrow.png" class="right-arrow" />
+																</button>
+															</td>
+															<!-- <td>Primary &amp; Functional review confirmed</td> -->
+															<td>0751</td>
+															<td>A72</td>
+															<td>HALB</td>
+															<td>QA540H01</td>
+															<td>ENILCONAZOLE</td>
+															<td>100</td>
+															<td>C460185</td>
+															<td>17-Jan-18</td>
+															<td>07-Mar-16</td>
+															<td>576</td>
+															<td>U</td>
+															<td>7.0000</td>
+															<td>KG</td>
+															<td>73891.28</td>
+															<td>GBP</td>
+															<td>OK</td>
+														</tr>
+														<tr>
+															<td class="table-action">
+																<button class="btn select" type="button">
+																	<img src="img/right-arrow.png" class="right-arrow" />
+																</button>
+															</td>
+															<!-- <td>Primary &amp; Functional review confirmed</td> -->
+															<td>0751</td>
+															<td>A52</td>
+															<td>HALB</td>
+															<td>QA540N25KFF</td>
+															<td>PARCONAZOLE (GEEL)</td>
+															<td>100</td>
+															<td>C459339</td>
+															<td>09-Jan-20</td>
+															<td>16-May-16</td>
+															<td>506</td>
+															<td>U</td>
+															<td>12.0000</td>
+															<td>KG</td>
+															<td>96009.25</td>
+															<td>GBP</td>
+															<td>OK</td>
+														</tr>
+														<tr>
+															<td class="table-action">
+																<button class="btn select" type="button">
+																	<img src="img/right-arrow.png" class="right-arrow" />
+																</button>
+															</td>
+															<!-- <td>Primary &amp; Functional review confirmed</td> -->
+															<td>0751</td>
+															<td>A72</td>
+															<td>HALB</td>
+															<td>QA540H01</td>
+															<td>ENILCONAZOLE</td>
+															<td>100</td>
+															<td>C456367</td>
+															<td>17-Jan-18</td>
+															<td>07-Mar-16</td>
+															<td>576</td>
+															<td>U</td>
+															<td>7.0000</td>
+															<td>KG</td>
+															<td>73915.49</td>
+															<td>GBP</td>
+															<td>OK</td>
+														</tr>
+														<tr>
+															<td class="table-action">
+																<button class="btn select" type="button">
+																	<img src="img/right-arrow.png" class="right-arrow" />
+																</button>
+															</td>
+															<!-- <td>Primary &amp; Functional review confirmed</td> -->
+															<td>0751</td>
+															<td>A72</td>
+															<td>HALB</td>
+															<td>QA540H01</td>
+															<td>ENILCONAZOLE</td>
+															<td>100</td>
+															<td>C454462</td>
+															<td>16-Jan-18</td>
+															<td>07-Mar-16</td>
+															<td>576</td>
+															<td>U</td>
+															<td>7.0000</td>
+															<td>KG</td>
+															<td>73780.61</td>
+															<td>GBP</td>
+															<td>OK</td>
+														</tr>
+														<tr>
+															<td class="table-action">
+																<button class="btn select" type="button">
+																	<img src="img/right-arrow.png" class="right-arrow" />
+																</button>
+															</td>
+															<!-- <td>Primary &amp; Functional review confirmed</td> -->
+															<td>0751</td>
+															<td>A72</td>
+															<td>HALB</td>
+															<td>QA540H01</td>
+															<td>ENILCONAZOLE</td>
+															<td>100</td>
+															<td>C453981</td>
+															<td>15-Jan-18</td>
+															<td>27-Jun-17</td>
+															<td>99</td>
+															<td>U</td>
+															<td>6.371</td>
+															<td>KG</td>
+															<td>31403.90</td>
+															<td>GBP</td>
+															<td>OK</td>
+														</tr>
+														<tr>
+															<td class="table-action">
+																<button class="btn select" type="button">
+																	<img src="img/right-arrow.png" class="right-arrow" />
+																</button>
+															</td>
+															<!-- <td>Primary &amp; Functional review confirmed</td> -->
+															<td>0751</td>
+															<td>A72</td>
+															<td>HALB</td>
+															<td>QA540H01</td>
+															<td>ENILCONAZOLE</td>
+															<td>100</td>
+															<td>C453796</td>
+															<td>14-Jan-18</td>
+															<td>07-Mar-16</td>
+															<td>576</td>
+															<td>U</td>
+															<td>7.0000</td>
+															<td>KG</td>
+															<td>75474.92</td>
+															<td>GBP</td>
+															<td>OK</td>
+														</tr>
+														<tr>
+															<td class="table-action">
+																<button class="btn select" type="button">
+																	<img src="img/right-arrow.png" class="right-arrow" />
+																</button>
+															</td>
+															<!-- <td>Primary &amp; Functional review confirmed</td> -->
+															<td>0751</td>
+															<td>A72</td>
+															<td>HALB</td>
+															<td>QA540H01EX</td>
+															<td>ENILCONAZOLE METAL VESSEL</td>
+															<td>100</td>
+															<td>C451701</td>
+															<td>19-Jan-18</td>
+															<td>07-Mar-16</td>
+															<td>576</td>
+															<td>U</td>
+															<td>7.0000</td>
+															<td>KG</td>
+															<td>63665.11</td>
+															<td>GBP</td>
+															<td>OK</td>
+														</tr>
+														<tr>
+															<td class="table-action">
+																<button class="btn select" type="button">
+																	<img src="img/right-arrow.png" class="right-arrow" />
+																</button>
+															</td>
+															<!-- <td>Primary &amp; Functional review confirmed</td> -->
+															<td>0751</td>
+															<td>A72</td>
+															<td>HALB</td>
+															<td>QA540H01</td>
+															<td>ENILCONAZOLE</td>
+															<td>100</td>
+															<td>C449664</td>
+															<td>11-Jan-18</td>
+															<td>07-Mar-16</td>
+															<td>576</td>
+															<td>U</td>
+															<td>7.0000</td>
+															<td>KG</td>
+															<td>67453.000</td>
+															<td>GBP</td>
+															<td>OK</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!---Batch details form-->
+						<div class="detail-form">
+							<div class="white-box">
+								<div class="cls pull-right"><span></span>  <span></span>
+								</div>
+								<h2>Selected Batch : C460185 QA540H01 ENILCONAZOLE</h2>
+								<form>
+									<div class="form-group flex radio-sec">
+										<label>Provide for</label>
+										<label>
+											<input type="radio" name="optradio" class="provide-for-yes" checked>Yes</label>
+										<label>
+											<input type="radio" name="optradio" class="provide-for-no">No</label>
+										<div class="value">
+											<label>Value %</label>
+											<select class="form-control">
+												<option>100</option>
+												<option>75</option>
+												<option>50</option>
+												<option>25</option>
+											</select>
+										</div>
+										<div class="tool-tip">
+											<img src="img/tooltip.png" />
+											<div class="tool-tip-table table-responsive">
+												<table class="table">
+													<tbody>
+														<tr>
+															<th style="width: 100px;">Value %</th>
+															<th>Original Quantity</th>
+															<th>Revised Quantity</th>
+															<th>Original Value</th>
+															<th>Revised Value</th>
+														</tr>
+														<tr>
+															<td align="center">100</td>
+															<td align="right">100.00</td>
+															<td align="right">100.00</td>
+															<td align="right">10,000.00</td>
+															<td align="right">10,000.00</td>
+														</tr>
+														<tr>
+															<td align="center">75</td>
+															<td align="right">100.00</td>
+															<td align="right">75.00</td>
+															<td align="right">10,000.00</td>
+															<td align="right">7,500.00</td>
+														</tr>
+														<tr>
+															<td align="center">50</td>
+															<td align="right">100.00</td>
+															<td align="right">50.00</td>
+															<td align="right">10,000.00</td>
+															<td align="right">5,000.00</td>
+														</tr>
+														<tr>
+															<td align="center">25</td>
+															<td align="right">100.00</td>
+															<td align="right">25.00</td>
+															<td align="right">10,000.00</td>
+															<td align="right">2,500.00</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</div>
+									</div>
+									<div class="form-group">
+										<label for="sel1">Category</label>
+										<select class="form-control" id="sel1">
+											<option>Customer Services</option>
+											<option>Destruction</option>
+											<option>Inventory review meeting to discuss</option>
+											<option>MS&T to advise</option>
+											<option>Rationalisation Project</option>
+											<option>Scheduling for future production</option>
+											<option>Return to Vendor</option>
+										</select>
+									 </div> <!--<span class="form-group info"> -->
+                              <!-- Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis d -->
+                              <!-- </span> -->
+									<div class="form-group">
+										<button type="button" class="btn ">Confirm</button>
+									</div>
+									<div class="form-group">
+										<label for="comment">Enter your Comment and click 'Insert' to add your Comment</label>
+										<textarea class="form-control" rows="5" id="comment"></textarea>
+									</div>
+									<div class="form-group d-flex">
+										<button type="button" class="btn ">Insert</button>
+										<button type="button" class="btn ">Copy last</button>
+										<button type="button" class="btn " data-toggle="modal" data-target="#apply-comments">Apply Comments to Batch</button>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer class="footer text-center d-flex">
+			<div>Copyright © 2020 Elanco. All rights reserved.</div>
+			<div>Version: 3.0 Deployed: 26-June-2020</div>
+		</footer>
+	</div>
+	<!---Mail dialog-->
+	<div class="modal fade" id="email-box" tabindex="-1" role="dialog" aria-labelledby="email-box" aria-hidden="true">
+		<div class="modal-content form-box large-box">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span>
+				</button>
+				<h4 class="modal-title" id="myModalLabel">Email</h4>
+			</div>
+			<div class="modal-body">
+				<!-- <div class="form-group"> -->
+					<!-- <label for="to">To</label> -->
+					<!-- <input type="text" class="form-control"> -->
+				<!-- </div> -->
+				<div class="form-group">
+					<label for="to">Subject</label>
+					<input type="text" class="form-control" value="Pre-populated subject">
+				</div>
+				<div class="form-group">
+					<label for="to">Message</label>
+					<textarea class="form-control" rows="5" id="message">Pre-populated email content</textarea>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<div class="modal-action">
+					<button type="button" class="btn">Send</button>
+					<button type="button" class="btn" data-dismiss="modal">Cancel</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!---Assign-box dialog-->
+	<div class="modal fade" id="assign-box" tabindex="-1" role="dialog" aria-labelledby="assign-box" aria-hidden="true">
+		<div class="modal-content form-box">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span>
+				</button>
+				<h4 class="modal-title" id="myModalLabel">Assign Controllers</h4>
+			</div>
+			<div class="modal-body">
+				<div class="form-group">
+					<input type="text" class="form-control" />
+				</div>
+				<div class="table-responsive">
+					<table class="table">
+						<thead>
+							<tr>
+								<th style="width:30px"><span><input class="check" type="checkbox"/></span>
+								</th>
+								<th>Select all</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>
+									<input class="check" type="checkbox" />
+								</td>
+								<td>0721</td>
+							</tr>
+							<tr>
+								<td>
+									<input class="check" type="checkbox" />
+								</td>
+								<td>0722</td>
+							</tr>
+							<tr>
+								<td>
+									<input class="check" type="checkbox" />
+								</td>
+								<td>0723</td>
+							</tr>
+							<tr>
+								<td>
+									<input class="check" type="checkbox" />
+								</td>
+								<td>0724</td>
+							</tr>
+							<tr>
+								<td>
+									<input class="check" type="checkbox" />
+								</td>
+								<td>0725</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<div class="modal-action">
+					<button type="button" class="btn">Assign</button>
+					<button type="button" class="btn" data-dismiss="modal">Cancel</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!---Apply-Comments dialog-->
+	<div class="modal fade" id="apply-comments" tabindex="-1" role="dialog" aria-labelledby="apply-comments" aria-hidden="true">
+		<div class="modal-content form-box">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span>
+				</button>
+				<h4 class="modal-title" id="myModalLabel">Apply Comments to batch</h4>
+			</div>
+			<div class="modal-body">
+				<div class="form-group">					
+					<input type="text" class="form-control" />
+				</div>
+				<table class="table">
+					<tbody>
+						<tr>
+							<td>
+								<input class="check" type="checkbox" />
+							</td>							
+							<th>Batch</th>
+						</tr>
+						<tr>
+							<td>
+								<input class="check" type="checkbox" />
+							</td>
+							<!-- <td>0751</td> -->
+							<td>1605056</td>
+						</tr>
+						<tr>
+							<td>
+								<input class="check" type="checkbox" />
+							</td>
+							<!-- <td>071</td> -->
+							<td>1605050</td>
+						</tr>
+						<tr>
+							<td>
+								<input class="check" type="checkbox" />
+							</td>
+							<!-- <td>051</td> -->
+							<td>K-4072020</td>
+						</tr>
+						<tr>
+							<td>
+								<input class="check" type="checkbox" />
+							</td>
+							<!-- <td>0721</td> -->
+							<td>F000309C</td>
+						</tr>
+						<tr>
+							<td>
+								<input class="check" type="checkbox" />
+							</td>
+							<!-- <td>0721</td> -->
+							<td>F000610N</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="modal-footer">
+				<div class="modal-action">
+					<button type="button" class="btn">Apply</button>
+					<button type="button" class="btn" data-dismiss="modal">Cancel</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="disabled"></div>
+	<script src="./js/jquery.min.js"></script>
+	<script src="./js/bootstrap.min.js"></script>
+	<script src="./js/parsley.min.js"></script>
+	<script src="./js/multiselect.min.js"></script>
+	<script src="./js/main.js"></script>
+	<script>
+		$('.multibox').multiselect();
+		         $('.multiselect-input').on('click', function() {
+		            $(this).css("background", "#fff");
+		         });
+		         $('.multiselect-input').on('focusout', function() {
+		            $(this).css("background", "transparent");
+		         });
+		         $('.provide-for-no').click(function () {
+		         $(this).parent().parent().find('.value').hide();
+		         });
+		         $('.provide-for-yes').click(function () {
+		         $(this).parent().parent().find('.value').show();
+		         });
+				 $(".user-info-box select").change(function () {
+					 $('.select-site div span').html($(this).children("option:selected").val());
+				 });
+				 
+				 $("#sku_itemList").hide();
+				 $("#sku_input").on('input',function(){
+						if ($(this).val().length > 1) {
+							$("#sku_itemList, #sku_itemList span").show();
+						}else{
+							$("#sku_itemList, #sku_itemList span").hide();
+
+						}
+				 });
+	</script>
+</body>
+
+</html>

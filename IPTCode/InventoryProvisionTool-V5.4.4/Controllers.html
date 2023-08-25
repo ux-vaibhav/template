@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Inventory Provision Tool (IPT)</title>
+	<link href="css/vendor/bootstrap.min.css" rel="stylesheet">
+	<link href="css/vendor/multiselect.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+</head>
+
+<body class="fix-header">
+	<div>
+		<nav class="navbar navbar-static-top blue-navbar">
+			<div class="navbar-header flex">
+				<div class="top-left-part ">
+					<a class="d-flex" href="inventory-review.html">
+						<img src="./img/elanco.svg" />
+						<div class="title-text">Inventory Provision <span> Tool (IPT)</span>
+						</div>
+					</a>
+				</div>
+				<div class="top-right-part">
+					<div id="menu-icon" class="pull-right menu-icon"> <span></span><span></span><span></span>
+					</div>
+					<div class="user-info pull-right"> <span>Welcome, Vijay Bansal</span>
+						<div class="user-info-box">
+							<ul class="list-unstyled">
+								<li><a href="javascript:void(0)">Site: Liverpool</a>
+								</li>
+								<li><a href="javascript:void(0)">Role: SA, WA, DS</a>
+								</li>
+								<li><a href="javascript:void(0)">Instance: Development (DEV1221)</a>
+								</li>
+								<li><a href="javascript:void(0)">Sign out</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</nav>
+		<div class="sidebar">
+			<ul class="list-unstyled">
+				<li> <a href="javascript:void(0)" class="link">Inventory Review</a>
+					<div class="sub-nav">
+						<div class="cls"> <span></span>
+							<span></span>
+							<span></span>
+						</div>
+						<div class="page-link"><a href="inventory-review.html" class="link">Inventory Review</a>
+						</div>
+						<ul class="list-unstyled">
+							<li><a href="frequency-review-2.html" class="link">Frequency Review</a>
+							</li>
+							<li><a href="slow-moving-inventory.html" class="link">Slow moving Inventory</a>
+							</li>
+							<li> <a href="manual-fail.html" class="link"> Manual Fail </a>
+							</li>
+							<li> <a href="javascript:void(0)" class="link">Upload</a>
+								<div class="sub-nav">
+									<div class="cls"> <span></span>
+										<span></span>
+										<span></span>
+									</div>
+									<div class="page-link"><a href="javascript:void(0)" class="link">Upload</a>
+									</div>
+									<ul class="list-unstyled">
+										<li><a href="" class="link">B/F Previous</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li><span class="link" data-toggle="modal" data-target="#email-box">Email</span>
+							</li>
+						</ul>
+					</div>
+				</li>
+				<li> <a href="javascript:void(0)" class="link">System Parameters</a>
+					<div class="sub-nav">
+						<div class="cls pull-right"> <span></span>
+							<span></span>
+							<span></span>
+						</div>
+						<div class="page-link"><a href="javascript:void(0)" class="link">System Parameters</a>
+						</div>
+						<ul class="list-unstyled">
+							<li><a href="frequency-review.html" class="link">Frequency Review</a>
+							</li>
+							<li><a href="Controllers.html" class="link">Controllers</a>
+							</li>
+							<li><a href="Category.html" class="link">Categories</a>
+							</li>
+							<li><a href="financial-filters.html" class="link">Financial Filters
+                           </a>
+							</li>
+							<li><a href="Business-Area.html" class="link">Business Area
+                           </a>
+							</li>
+							<li><a href="Plant.html" class="link">Plants
+                           </a>
+							</li>
+							<li><a href="Inv-review-tables.html" class="link">Inv Review Tables
+                           </a>
+							</li>
+							<li><a href="Access-roles.html" class="link">Access Roles
+                           </a>
+							</li>
+							<li><a href="Class-accounts.html" class="link">Class Accounts
+                           </a>
+							</li>
+							<li><a href="Materials.html" class="link">Materials
+                           </a>
+							</li>
+						</ul>
+					</div>
+				</li>
+				<li> <a href="javascript:void(0)" class="link">System Admin</a>
+					<div class="sub-nav">
+						<div class="cls pull-right"> <span></span>
+							<span></span>
+							<span></span>
+						</div>
+						<div class="page-link"><a href="system-admin.html" class="link">System Admin</a>
+						</div>
+						<ul class="list-unstyled">
+							<li><a href="Site-maintenance.html" class="link">Site Maintenance</a>
+							</li>
+							<li><a href="Assign-security.html" class="link">Assign Security</a>
+							</li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<main class="main">
+			<div class="container-fluid">
+				<div class="col-md-12 white-box rel-box">
+					<h2>
+                     Controllers
+                  </h2>
+					<form>
+						<div class="form-group">
+							<div class="row">
+								<div class="col-xs-3">
+									<input type="text" id="table-search" class="form-control" placeholder="Search" />
+								</div>
+								<button class="btn tablezoom pull-right" type="button">Table Magnify
+									<img src="./img/magnifying-glass.png" />
+								</button>
+							</div>
+						</div>
+					</form>
+					<div class="table-responsive">
+						<table class="table" id="ControllerTable">
+							<thead>
+								<tr>
+									<th>Ctlr</th>
+									<th>Team</th>
+									<th>Business Owner</th>
+									<th></th>
+									<th>Last Updated</th>
+									<th>By</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>1</td>
+									<td>salvage plants</td>
+									<td>YD79142</td>
+									<td>David Anthony Cromby</td>
+									<td>08-Feb-2017 11:04</td>
+									<td>CATHERINE STAGG</td>
+								</tr>
+								<tr>
+									<td>90</td>
+									<td>Deleted Items</td>
+									<td>YD79142</td>
+									<td>David Anthony Cromby</td>
+									<td>08-Feb-2017 11:04</td>
+									<td>CATHERINE STAGG</td>
+								</tr>
+								<tr>
+									<td>A51</td>
+									<td>Biovet</td>
+									<td>YD26175</td>
+									<td>CRITCHLEY TRACY ELIZABETH</td>
+									<td>13-Nov-2013 08:48</td>
+									<td>Jeffrey Mark</td>
+								</tr>
+								<tr>
+									<td>A52</td>
+									<td>Janssen FP</td>
+									<td>YD26175</td>
+									<td>CRITCHLEY TRACY ELIZABETH</td>
+									<td>13-Nov-2013 08:48</td>
+									<td>AARON DIMECH</td>
+								</tr>
+								<tr>
+									<td>A53</td>
+									<td>Telmin - Janseen</td>
+									<td>YD26175</td>
+									<td>CRITCHLEY TRACY ELIZABETH</td>
+									<td>31-Dec-2013 10:21</td>
+									<td>AARON DIMECH</td>
+								</tr>
+								<tr>
+									<td>A54</td>
+									<td>Janseen</td>
+									<td>YD26175</td>
+									<td>CRITCHLEY TRACY ELIZABETH</td>
+									<td>31-Dec-2013 10:30</td>
+									<td>AARON DIMECH</td>
+								</tr>
+								<tr>
+									<td>A55</td>
+									<td>Lusomedicamenta</td>
+									<td>YD26175</td>
+									<td>CRITCHLEY TRACY ELIZABETH</td>
+									<td>13-Nov-2013 08:48</td>
+									<td>AARON DIMECH</td>
+								</tr>
+								<tr>
+									<td>A56</td>
+									<td>Provimi Ex- Atlantic</td>
+									<td>YD26175</td>
+									<td>CRITCHLEY TRACY ELIZABETH</td>
+									<td>31-Dec-2013 10:49</td>
+									<td>AARON DIMECH</td>
+								</tr>
+								<tr>
+									<td>A57</td>
+									<td>Octavius Hunt</td>
+									<td>YD26175</td>
+									<td>CRITCHLEY TRACY ELIZABETH</td>
+									<td>13-Nov-2013 08:48</td>
+									<td>AARON DIMECH</td>
+								</tr>
+								<tr>
+									<td>A58</td>
+									<td>Sanochemia</td>
+									<td>YD26175</td>
+									<td>CRITCHLEY TRACY ELIZABETH</td>
+									<td>24-Jun-2016 14:27</td>
+									<td>XINYU GIORGIONI</td>
+								</tr>
+								<tr>
+									<td>A59</td>
+									<td>Sanico</td>
+									<td>YD26175</td>
+									<td>CRITCHLEY TRACY ELIZABETH</td>
+									<td>13-Nov-2013 08:48</td>
+									<td>AARON DIMECH</td>
+								</tr>
+								<tr>
+									<td>A60</td>
+									<td>Smeets</td>
+									<td>YD26175</td>
+									<td>CRITCHLEY TRACY ELIZABETH</td>
+									<td>13-Nov-2013 08:48</td>
+									<td>AARON DIMECH</td>
+								</tr>
+								<tr>
+									<td>A61</td>
+									<td>Yabang</td>
+									<td>YD26175</td>
+									<td>CRITCHLEY TRACY ELIZABETH</td>
+									<td>31-Dec-2013 11:24</td>
+									<td>AARON DIMECH</td>
+								</tr>
+								<tr>
+									<td>A62</td>
+									<td>Janseen API Keto</td>
+									<td>YD26175</td>
+									<td>CRITCHLEY TRACY ELIZABETH</td>
+									<td>31-Dec-2013 11:37</td>
+									<td>AARON DIMECH</td>
+								</tr>
+								<tr>
+									<td>A66</td>
+									<td>various API suppliers</td>
+									<td>YD26175</td>
+									<td>CRITCHLEY TRACY ELIZABETH</td>
+									<td>31-Dec-2013 11:48</td>
+									<td>AARON DIMECH</td>
+								</tr>
+								<tr>
+									<td>A69</td>
+									<td>various API suppliers</td>
+									<td>YD26175</td>
+									<td>CRITCHLEY TRACY ELIZABETH</td>
+									<td>31-Dec-2013 12:20</td>
+									<td>AARON DIMECH</td>
+								</tr>
+								<tr>
+									<td>A72</td>
+									<td>China/Janseen APIs</td>
+									<td>YD26175</td>
+									<td>CRITCHLEY TRACY ELIZABETH</td>
+									<td>13-Nov-2013 08:48</td>
+									<td>AARON DIMECH</td>
+								</tr>
+								<tr>
+									<td>A75</td>
+									<td>Alt inlicenced gp1</td>
+									<td>YD26175</td>
+									<td>CRITCHLEY TRACY ELIZABETH</td>
+									<td>13-Nov-2013 08:48</td>
+									<td>AARON DIMECH</td>
+								</tr>
+								<tr>
+									<td>A76</td>
+									<td>Atl Inlicensed ECO</td>
+									<td>YD26175</td>
+									<td>CRITCHLEY TRACY ELIZABETH</td>
+									<td>13-Nov-2013 08:48</td>
+									<td>AARON DIMECH</td>
+								</tr>
+								<tr>
+									<td>A77</td>
+									<td>AtlInlicense Orion</td>
+									<td>YD26175</td>
+									<td>Tracy Elizabeth Critchley</td>
+									<td>26-Apr-2020 19:07</td>
+									<td>Srikanth Tekumudi</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer class="footer text-center d-flex">
+			<div>Copyright © 2020 Elanco. All rights reserved.</div>
+			<div>Version: 2.3 Deployed: 14-May-2018</div>
+		</footer>
+	</div>
+	<div class="disabled"></div>
+	<script src="./js/jquery.min.js"></script>
+	<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.js"></script>
+	<script src="./js/bootstrap.min.js"></script>
+	<script src="./js/parsley.min.js"></script>
+	<script src="./js/main.js"></script>
+	<script>
+		$('#ControllerTable').DataTable({
+		         "sDom":"ltipr",
+		         "lengthChange": false
+		      });
+		      var oTable = $('#ControllerTable').DataTable(); 
+		      $('#table-search').keyup(function(){
+		      oTable.search($(this).val(), true, false).draw() ;
+		})
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,9 @@
+.footer {
+	color: rgb(88, 102, 110);
+	padding: 20px 15px;
+	background: rgb(255, 255, 255);
+	letter-spacing: 1px;
+	font-size: 13px;
+	font-weight: 400;
+	box-shadow: 0 0 10px #dadada;
+}

@@ -1,0 +1,11 @@
+:root {
+    --primary-color: #ff7300;
+    --font-color:#111111;
+    --white-color:#ffffff;
+    --black-color:#000000;
+    --shade-1:#0a0a0a;
+    --shade-2: #151515;
+    --primary-font: 'Open Sans', sans-serif;
+    --secondary-font: "Oswald", sans-serif;
+    --radius:3px;
+  }

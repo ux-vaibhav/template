@@ -1,0 +1,140 @@
+.table-responsive {
+	overflow-y: hidden;
+}
+.table {
+	margin-bottom: 10px;
+	font-size: 13px;
+	font-weight: 400;
+}
+.table > thead > tr > th {
+	vertical-align: bottom;
+	border-bottom: 1px solid rgb(228, 231, 234);
+}
+.table > tbody > tr > td,
+.table > tbody > tr > th,
+.table > tfoot > tr > td,
+.table > tfoot > tr > th,
+.table > thead > tr > td,
+.table > thead > tr > th {
+	padding: 10px 8px;
+}
+.table-bordered,
+.table > tbody > tr > td,
+.table > tbody > tr > th,
+.table > tfoot > tr > td,
+.table > tfoot > tr > th,
+.table > thead > tr > td,
+.table > thead > tr > th {
+	border-top: 1px solid rgb(228, 231, 234);
+	border: 0;
+}
+.table th {
+	color:#0072ce;
+	/* #EE2E5D; */
+	font-weight: 500;
+	border-top: 0;
+	font-size: 14px;
+}
+.table tbody {
+	/* color: rgb(121, 121, 121); */
+}
+.table tr:nth-child(even) {
+	background: rgba(0, 0, 0, 0.03);
+}
+/* .table thead tr:nth-child(1) {
+	background: rgba(0, 0, 0, 0.05);
+} */
+.table th:first-child,
+td:first-child {
+	padding-left: 15px !important;
+}
+.table-responsive {
+	position: relative;
+}
+.rel-box.fixed {
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	overflow: auto;
+	z-index: 99999;
+	background-color: #fff;
+	margin: 0;
+	overflow: auto;
+	transition:0.5s all ease;
+}
+.rel-box.fixed .detail-form, .rel-box.fixed.white-box h2{
+	display: none;
+}
+.tablezoom{
+	margin-right:15px;
+	display: none;
+}
+.tablezoom img {
+	width: 17px;
+}
+td.table-action {
+	text-align: center;
+}
+.table thead tr:first-child {
+    background: #f1f1f1;
+}
+/**************Datatable***************/
+
+div#ControllerTable_paginate a,
+div#ControllerTable_paginate a:hover, div#ControllerTable_paginate a:focus {
+	padding: 5px 10px;
+    display: inline-block;
+    background: #f1f1f1;
+    margin: 0 5px 0 0;
+    border-radius: 2px;
+    text-decoration: none;
+	cursor: pointer;
+	border:0;
+	outline: 0;
+}
+div#ControllerTable_info {
+	float: right;
+}
+div#ControllerTable_length {
+	float: right;
+	color: #999;
+	padding-bottom: 25px;
+}
+div#ControllerTable_filter {
+	color: #999;
+}
+div#ControllerTable_filter input {
+	border: 0;
+	border-bottom: 2px solid #dadada;
+	margin-left: 10px;
+	outline: none;
+}
+div#ControllerTable_filter input:focus {
+	border-bottom: 2px solid #66afe9;
+}
+#ControllerTable_filter label,
+#ControllerTable_length label {
+	font-weight: 400;
+	color: #666;
+	letter-spacing: 1px;
+	display: inline-block;
+}
+.dataTable th,
+.dataTable th:focus,
+.dataTable th:hover {
+	cursor: pointer;
+	outline: none;
+}
+div#ControllerTable_length select {
+	border: 0;
+	border-bottom: 2px solid #dadada;
+}
+/* div#ControllerTable_paginate {
+    margin-bottom: 15px;
+} */
+
+.toggle-wrapper th:first-child{
+	width:100px;
+}

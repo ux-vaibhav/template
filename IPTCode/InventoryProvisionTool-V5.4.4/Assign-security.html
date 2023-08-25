@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Inventory Provision Tool (IPT)</title>
+	<link href="css/vendor/bootstrap.min.css" rel="stylesheet">
+	<link href="css/vendor/multiselect.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+</head>
+
+<body class="fix-header">
+	<div>
+		<nav class="navbar navbar-static-top blue-navbar">
+			<div class="navbar-header flex">
+				<div class="top-left-part ">
+					<a class="d-flex" href="inventory-review.html">
+						<img src="./img/elanco.svg" />
+						<div class="title-text">Inventory Provision <span> Tool (IPT)</span>
+						</div>
+					</a>
+				</div>
+				<div class="top-right-part">
+					<div id="menu-icon" class="pull-right menu-icon"> <span></span><span></span><span></span>
+					</div>
+					<div class="user-info pull-right"> <span>Welcome, Vijay Bansal</span>
+						<div class="user-info-box">
+							<ul class="list-unstyled">
+								<li><a href="javascript:void(0)">Site: Liverpool</a>
+								</li>
+								<li><a href="javascript:void(0)">Role: SA, WA, DS</a>
+								</li>
+								<li><a href="javascript:void(0)">Instance: Development (DEV1221)</a>
+								</li>
+								<li><a href="javascript:void(0)">Sign out</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</nav>
+		<div class="sidebar">
+			<ul class="list-unstyled">
+				<li> <a href="javascript:void(0)" class="link">Inventory Review</a>
+					<div class="sub-nav">
+						<div class="cls"> <span></span>
+							<span></span>
+							<span></span>
+						</div>
+						<div class="page-link"><a href="inventory-review.html" class="link">Inventory Review</a>
+						</div>
+						<ul class="list-unstyled">
+							<li><a href="frequency-review-2.html" class="link">Frequency Review</a>
+							</li>
+							<li><a href="slow-moving-inventory.html" class="link">Slow moving Inventory</a>
+							</li>
+							<li> <a href="manual-fail.html" class="link"> Manual Fail </a>
+							</li>
+							<li> <a href="javascript:void(0)" class="link">Upload</a>
+								<div class="sub-nav">
+									<div class="cls"> <span></span>
+										<span></span>
+										<span></span>
+									</div>
+									<div class="page-link"><a href="javascript:void(0)" class="link">Upload</a>
+									</div>
+									<ul class="list-unstyled">
+										<li><a href="" class="link">B/F Previous</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li><span class="link" data-toggle="modal" data-target="#email-box">Email</span>
+							</li>
+						</ul>
+					</div>
+				</li>
+				<li> <a href="javascript:void(0)" class="link">System Parameters</a>
+					<div class="sub-nav">
+						<div class="cls pull-right"> <span></span>
+							<span></span>
+							<span></span>
+						</div>
+						<div class="page-link"><a href="javascript:void(0)" class="link">System Parameters</a>
+						</div>
+						<ul class="list-unstyled">
+							<li><a href="frequency-review.html" class="link">Frequency Review</a>
+							</li>
+							<li><a href="Controllers.html" class="link">Controllers</a>
+							</li>
+							<li><a href="Category.html" class="link">Categories</a>
+							</li>
+							<li><a href="financial-filters.html" class="link">Financial Filters
+                           </a>
+							</li>
+							<li><a href="Business-Area.html" class="link">Business Area
+                           </a>
+							</li>
+							<li><a href="Plant.html" class="link">Plants
+                           </a>
+							</li>
+							<li><a href="Inv-review-tables.html" class="link">Inv Review Tables
+                           </a>
+							</li>
+							<li><a href="Access-roles.html" class="link">Access Roles
+                           </a>
+							</li>
+							<li><a href="Class-accounts.html" class="link">Class Accounts
+                           </a>
+							</li>
+							<li><a href="Materials.html" class="link">Materials
+                           </a>
+							</li>
+						</ul>
+					</div>
+				</li>
+				<li> <a href="javascript:void(0)" class="link">System Admin</a>
+					<div class="sub-nav">
+						<div class="cls pull-right"> <span></span>
+							<span></span>
+							<span></span>
+						</div>
+						<div class="page-link"><a href="system-admin.html" class="link">System Admin</a>
+						</div>
+						<ul class="list-unstyled">
+							<li><a href="Site-maintenance.html" class="link">Site Maintenance</a>
+							</li>
+							<li><a href="Assign-security.html" class="link">Assign Security</a>
+							</li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<main class="main">
+			<div class="container-fluid">
+				<div class="col-md-12 white-box rel-box">
+					<h2>
+						Assign Security
+                  </h2>
+					<form>
+						<div class="form-group">
+							<div class="row">
+								<div class="col-xs-3">
+									<input type="text" id="table-search" class="form-control" placeholder="Search" />
+								</div>
+								<button class="btn tablezoom pull-right" type="button">Table Magnify
+									<img src="./img/magnifying-glass.png" />
+								</button>
+							</div>
+						</div>
+					</form>
+					<div class="table-responsive">
+						<table class="table" id="ControllerTable">
+							<thead>
+								<tr>
+									<th>User ID</th>
+									<th>Name</th>
+									<th>Role</th>
+									<th>Guest</th>
+									<th>Last Updated</th>
+									<th>By</th>
+									</tr>
+							</thead>
+								<tbody>
+								
+								<tr>
+								
+								<td>YDX7329</td>
+								<td>ASHTON GAIL</td>
+								<td>Schedule Buyer / Master Sch.</td>
+								<td>N</td>
+								<td>21-Feb-2014 11:04</td>
+								<td>Jeffrey Mark</td>
+								</tr>
+								<tr>
+								
+								<td>YD25911</td>
+								<td>ATKINSON PHILIP CHARLES</td>
+								<td>Quality</td>
+								<td>N</td>
+								<td>03-Mar-2014 13:30</td>
+								<td>Jeffrey Mark</td>
+								</tr>
+								<tr>
+								
+								<td>YD79087</td>
+								<td>Aaron Dimech</td>
+								<td>Schedule Buyer / Master Sch.</td>
+								<td>N</td>
+								<td>23-Sep-2016 10:27</td>
+								<td>Jeffrey Mark</td>
+								</tr>
+								<tr>
+								
+								<td>C224794</td>
+								<td>Abbygail Boyd - Network</td>
+								<td>Quality</td>
+								<td>N</td>
+								<td>18-Jan-2017 09:44</td>
+								<td>Jeffrey Mark</td>
+								</tr>
+								<tr>
+								
+								<td>C260409</td>
+								<td>Ali Shakir</td>
+								<td>MS&amp;T</td>
+								<td>N</td>
+								<td>25-Feb-2020 07:48</td>
+								<td>Shalu Shalu</td>
+								</tr>
+								<tr>
+								
+								<td>C260409</td>
+								<td>Ali Shakir</td>
+								<td>Inventory co-ordinator</td>
+								<td>N</td>
+								<td>25-Feb-2020 07:48</td>
+								<td>Shalu Shalu</td>
+								</tr>
+								<tr>
+								
+								<td>C260409</td>
+								<td>Ali Shakir</td>
+								<td>Finance</td>
+								<td>N</td>
+								<td>25-Feb-2020 07:47</td>
+								<td>Shalu Shalu</td>
+								</tr>
+								<tr>
+								
+								<td>C260409</td>
+								<td>Ali Shakir</td>
+								<td>Customer Services</td>
+								<td>N</td>
+								<td>25-Feb-2020 07:47</td>
+								<td>Shalu Shalu</td>
+								</tr>
+								<tr>
+								
+								<td>C260409</td>
+								<td>Ali Shakir</td>
+								<td>System Admin</td>
+								<td>N</td>
+								<td>22-Jan-2019 15:24</td>
+								<td>Vijay Bansal</td>
+								</tr>
+								<tr>
+								
+								<td>C260409</td>
+								<td>Ali Shakir</td>
+								<td>Data Steward</td>
+								<td>N</td>
+								<td>03-Jun-2019 12:33</td>
+								<td>Shakir Ali</td>
+								</tr>
+								<tr>
+								
+								<td>C260409</td>
+								<td>Ali Shakir</td>
+								<td>Website Admin</td>
+								<td>N</td>
+								<td>10-Jun-2019 11:22</td>
+								<td>Shakir Ali</td>
+								</tr>
+								<tr>
+								
+								<td>C260409</td>
+								<td>Ali Shakir</td>
+								<td>Management</td>
+								<td>N</td>
+								<td>25-Feb-2020 07:48</td>
+								<td>Shalu Shalu</td>
+								</tr>
+								<tr>
+								
+								<td>C260409</td>
+								<td>Ali Shakir</td>
+								<td>Process Flow Team</td>
+								<td>N</td>
+								<td>25-Feb-2020 07:48</td>
+								<td>Shalu Shalu</td>
+								</tr>
+								<tr>
+								
+								<td>C260409</td>
+								<td>Ali Shakir</td>
+								<td>Quality</td>
+								<td>N</td>
+								<td>25-Feb-2020 07:49</td>
+								<td>Shalu Shalu</td>
+								</tr>
+								<tr>
+								
+								<td>C260409</td>
+								<td>Ali Shakir</td>
+								<td>Schedule Buyer / Master Sch.</td>
+								<td>N</td>
+								<td>25-Feb-2020 07:49</td>
+								<td>Shalu Shalu</td>
+								</tr>
+								<tr>
+								
+								<td>C260409</td>
+								<td>Ali Shakir</td>
+								<td>Warehousing</td>
+								<td>N</td>
+								<td>25-Feb-2020 07:49</td>
+								<td>Shalu Shalu</td>
+								</tr>
+								<tr>
+								
+								<td>2700474</td>
+								<td>Anand Srinivasan</td>
+								<td>XYZ</td>
+								<td>N</td>
+								<td>27-Feb-2020 12:34</td>
+								<td>Shalu Shalu</td>
+								</tr>
+								<tr>
+								
+								<td>2700474</td>
+								<td>Anand Srinivasan</td>
+								<td>Website Admin</td>
+								<td>N</td>
+								<td>27-Feb-2020 12:33</td>
+								<td>Shalu Shalu</td>
+								</tr>
+								<tr>
+								
+								<td>2700474</td>
+								<td>Anand Srinivasan</td>
+								<td>System Admin</td>
+								<td>N</td>
+								<td>27-Feb-2020 12:32</td>
+								<td>Shalu Shalu</td>
+								</tr>
+								<tr>
+								
+								<td>2700474</td>
+								<td>Anand Srinivasan</td>
+								<td>Schedule Buyer / Master Sch.</td>
+								<td>N</td>
+								<td>27-Feb-2020 12:31</td>
+								<td>Shalu Shalu</td>
+								</tr>
+								<tr>
+								
+								<td>2700474</td>
+								<td>Anand Srinivasan</td>
+								<td>Quality</td>
+								<td>N</td>
+								<td>27-Feb-2020 12:31</td>
+								<td>Shalu Shalu</td>
+								</tr>
+								<tr>
+								
+								<td>2700474</td>
+								<td>Anand Srinivasan</td>
+								<td>Process Flow Team</td>
+								<td>N</td>
+								<td>27-Feb-2020 12:31</td>
+								<td>Shalu Shalu</td>
+								</tr>
+								<tr>
+								
+								<td>2700474</td>
+								<td>Anand Srinivasan</td>
+								<td>Management</td>
+								<td>N</td>
+								<td>27-Feb-2020 12:30</td>
+								<td>Shalu Shalu</td>
+								</tr>
+								<tr>
+								
+								<td>2700474</td>
+								<td>Anand Srinivasan</td>
+								<td>MS&amp;T</td>
+								<td>N</td>
+								<td>27-Feb-2020 12:30</td>
+								<td>Shalu Shalu</td>
+								</tr>
+								<tr>
+								
+								<td>2700474</td>
+								<td>Anand Srinivasan</td>
+								<td>Inventory co-ordinator</td>
+								<td>N</td>
+								<td>27-Feb-2020 12:28</td>
+								<td>Shalu Shalu</td>
+								</tr>
+								<tr>
+								
+								<td>2700474</td>
+								<td>Anand Srinivasan</td>
+								<td>Finance</td>
+								<td>N</td>
+								<td>27-Feb-2020 12:28</td>
+								<td>Shalu Shalu</td>
+								</tr>
+								<tr>
+								
+								<td>2700474</td>
+								<td>Anand Srinivasan</td>
+								<td>Data Steward</td>
+								<td>N</td>
+								<td>27-Feb-2020 12:27</td>
+								<td>Shalu Shalu</td>
+								</tr>
+								
+								</tbody>
+								</table>
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer class="footer text-center d-flex">
+			<div>Copyright © 2020 Elanco. All rights reserved.</div>
+			<div>Version: 2.3 Deployed: 14-May-2018</div>
+		</footer>
+	</div>
+	<div class="disabled"></div>
+	<script src="./js/jquery.min.js"></script>
+	<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.js"></script>
+	<script src="./js/bootstrap.min.js"></script>
+	<script src="./js/parsley.min.js"></script>
+	<script src="./js/main.js"></script>
+	<script>
+		$('#ControllerTable').DataTable({
+		         "sDom":"ltipr",
+		         "lengthChange": false
+		      });
+		      var oTable = $('#ControllerTable').DataTable(); 
+		      $('#table-search').keyup(function(){
+		      oTable.search($(this).val(), true, false).draw() ;
+		})
+	</script>
+</body>
+
+</html>

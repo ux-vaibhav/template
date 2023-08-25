@@ -1,0 +1,967 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>ITP</title>
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+</head>
+
+<body class="fix-header">
+	<div id="wrapper">
+		<nav class="navbar navbar-static-top">
+			<div class="navbar-header">
+				<div id="menu-icon" class="pull-right menu-icon">
+					<span></span><span></span><span></span>
+				</div>
+				<div class="top-left-part">
+					<img src="./img/elanco.svg" />
+				</div>
+				<div class="tagline col-xs-4 hidden-sm">Inventory Provision Tool</div>
+				<div class="user-info pull-right">
+					<span>Welcome Shah Sameer (C282551) Site - Liverpool</span>
+				</div>
+			</div>
+		</nav>
+		<div class="sidebar">
+			<a href="inventory-review.html" class="link">Inventory Review</a>
+			<a href="system-parameters.html" class="link">System Parameters</a>
+			<a href="system-admin.html" class="link">System Admin</a>
+			<a href="" class="link">Sign Out</a>
+		</div>
+		<main class="main">
+			<div class="container-fluid">
+				<div class="white-box sub-selector">
+					<div id="sub-selector" class="menu-icon">
+						<span></span><span></span><span></span>
+					</div>
+					<h3 class="tab-value"></h3>
+				</div>
+				<div class="tab-container fix-tab">
+				<ul class="nav nav-tabs" role="tablist">
+					<li class="active">
+						<a href="#Controllers" role="tab" data-toggle="tab">
+							<h3 class="box-title">Controllers</h3>
+						</a>
+					</li>
+					<li>
+						<a href="#Categories" role="tab" data-toggle="tab">
+							<h3 class="box-title">Categories</h3>
+						</a>
+					</li>
+					<li>
+						<a href="#FinancialFilters" role="tab" data-toggle="tab">
+							<h3 class="box-title">Financial Filters
+							</h3>
+						</a>
+					</li>
+					<li>
+						<a href="#BusinessArea" role="tab" data-toggle="tab">
+							<h3 class="box-title">Business Area
+							</h3>
+						</a>
+					</li>
+					<li>
+						<a href="#Plants" role="tab" data-toggle="tab">
+							<h3 class="box-title">Plants
+							</h3>
+						</a>
+					</li>
+					<li>
+						<a href="#InvReviewTables" role="tab" data-toggle="tab">
+							<h3 class="box-title">Inv Review Tables
+							</h3>
+						</a>
+					</li>
+					<li>
+						<a href="#AccessRoles" role="tab" data-toggle="tab">
+							<h3 class="box-title">Access Roles
+							</h3>
+						</a>
+					</li>
+					<li>
+						<a href="#ClassAccounts" role="tab" data-toggle="tab">
+							<h3 class="box-title">Class Accounts
+							</h3>
+						</a>
+					</li>
+					<li>
+						<a href="#Materials" role="tab" data-toggle="tab">
+							<h3 class="box-title">Materials
+							</h3>
+						</a>
+					</li>
+				</ul>
+				<div class="tab-content">				
+					<div class="tab-pane fade active in" id="Controllers">
+						<div class="row">
+							<div class="col-sm-12">
+								<div class="white-box">
+									<form class="v-form">
+										<div class="form-group">
+											<!-- <label for="Controller">Controller</label> -->
+											<input type="text" class="form-control" id="Controller"
+												placeholder="Controller">
+										</div>
+										<div class="form-group">
+											<!-- <label for="TeamName">Team Name</label> -->
+											<input type="text" class="form-control" id="TeamName"
+												placeholder="Team Name">
+										</div>
+										<div class="form-group">
+											<!-- <label for="BusinessOwner">Business Owner</label> -->
+											<input type="text" class="form-control" id="BusinessOwner"
+												placeholder="Business Owner">
+										</div>
+
+										<div class="action">
+											<button type="submit" class="btn btn-block">Insert</button>
+										</div>
+									</form>
+									<div class="table-responsive">
+										<div class="tablezoom"><img src="./img/magnifying-glass.png"/></div>
+										<table class="table">
+											<tbody>
+												<tr>
+													<th scope="col">Ctlr</th>
+													<th scope="col">Team</th>
+													<th scope="col">Business Owner</th>
+													<th scope="col">&nbsp;</th>
+													<th scope="col">Last Updated</th>
+													<th scope="col">By</th>
+												</tr>
+
+												<td>1</td>
+												<td>salvage plants</td>
+												<td>YD79142 </td>
+												<td>David Anthony Cromby</td>
+												<td>08-Feb-2017 11:04</td>
+												<td>CATHERINE STAGG</td>
+												</tr>
+												<tr>
+													<td>90</td>
+													<td>Deleted Items</td>
+													<td>YD79142 </td>
+													<td>David Anthony Cromby</td>
+													<td>08-Feb-2017 11:04</td>
+													<td>CATHERINE STAGG</td>
+												</tr>
+												<tr>
+													<td>A51</td>
+													<td>Biovet</td>
+													<td>YD26175</td>
+													<td>CRITCHLEY TRACY ELIZABETH</td>
+													<td>13-Nov-2013 08:48</td>
+													<td>Jeffrey Mark</td>
+												</tr>
+												<tr>
+													<td>A52</td>
+													<td>Janssen FP</td>
+													<td>YD26175</td>
+													<td>CRITCHLEY TRACY ELIZABETH</td>
+													<td>13-Nov-2013 08:48</td>
+													<td>AARON DIMECH</td>
+												</tr>
+												<tr>
+													<td>A53</td>
+													<td>Telmin - Janseen</td>
+													<td>YD26175</td>
+													<td>CRITCHLEY TRACY ELIZABETH</td>
+													<td>31-Dec-2013 10:21</td>
+													<td>AARON DIMECH</td>
+												</tr>
+												<tr>
+
+													<td>A54</td>
+													<td>Janseen</td>
+													<td>YD26175</td>
+													<td>CRITCHLEY TRACY ELIZABETH</td>
+													<td>31-Dec-2013 10:30</td>
+													<td>AARON DIMECH</td>
+												</tr>
+												<tr>
+													<td>A55</td>
+													<td>Lusomedicamenta</td>
+													<td>YD26175</td>
+													<td>CRITCHLEY TRACY ELIZABETH</td>
+													<td>13-Nov-2013 08:48</td>
+													<td>AARON DIMECH</td>
+												</tr>
+												<tr>
+													<td>A56</td>
+													<td>Provimi Ex- Atlantic</td>
+													<td>YD26175</td>
+													<td>CRITCHLEY TRACY ELIZABETH</td>
+													<td>31-Dec-2013 10:49</td>
+													<td>AARON DIMECH</td>
+												</tr>
+												<tr>
+													<td>A57</td>
+													<td>Octavius Hunt</td>
+													<td>YD26175</td>
+													<td>CRITCHLEY TRACY ELIZABETH</td>
+													<td>13-Nov-2013 08:48</td>
+													<td>AARON DIMECH</td>
+												</tr>
+												<tr>
+													<td>A58</td>
+													<td>Sanochemia</td>
+													<td>YD26175</td>
+													<td>CRITCHLEY TRACY ELIZABETH</td>
+													<td>24-Jun-2016 14:27</td>
+													<td>XINYU GIORGIONI</td>
+												</tr>
+												<tr>
+													<td>A59</td>
+													<td>Sanico</td>
+													<td>YD26175</td>
+													<td>CRITCHLEY TRACY ELIZABETH</td>
+													<td>13-Nov-2013 08:48</td>
+													<td>AARON DIMECH</td>
+												</tr>
+												<tr>
+													<td>A60</td>
+													<td>Smeets</td>
+													<td>YD26175</td>
+													<td>CRITCHLEY TRACY ELIZABETH</td>
+													<td>13-Nov-2013 08:48</td>
+													<td>AARON DIMECH</td>
+												</tr>
+												<tr>
+													<td>A61</td>
+													<td>Yabang</td>
+													<td>YD26175</td>
+													<td>CRITCHLEY TRACY ELIZABETH</td>
+													<td>31-Dec-2013 11:24</td>
+													<td>AARON DIMECH</td>
+												</tr>
+												<tr>
+													<td>A62</td>
+													<td>Janseen API Keto</td>
+													<td>YD26175</td>
+													<td>CRITCHLEY TRACY ELIZABETH</td>
+													<td>31-Dec-2013 11:37</td>
+													<td>AARON DIMECH</td>
+												</tr>
+												<tr>
+
+													<td>A66</td>
+													<td>various API suppliers</td>
+													<td>YD26175</td>
+													<td>CRITCHLEY TRACY ELIZABETH</td>
+													<td>31-Dec-2013 11:48</td>
+													<td>AARON DIMECH</td>
+												</tr>
+												<tr>
+													<td>A69</td>
+													<td>various API suppliers</td>
+													<td>YD26175</td>
+													<td>CRITCHLEY TRACY ELIZABETH</td>
+													<td>31-Dec-2013 12:20</td>
+													<td>AARON DIMECH</td>
+												</tr>
+												<tr>
+													<td>A72</td>
+													<td>China/Janseen APIs</td>
+													<td>YD26175</td>
+													<td>CRITCHLEY TRACY ELIZABETH</td>
+													<td>13-Nov-2013 08:48</td>
+													<td>AARON DIMECH</td>
+												</tr>
+												<tr>
+													<td>A75</td>
+													<td>Alt inlicenced gp1</td>
+													<td>YD26175</td>
+													<td>CRITCHLEY TRACY ELIZABETH</td>
+													<td>13-Nov-2013 08:48</td>
+													<td>AARON DIMECH</td>
+												</tr>
+												<tr>
+													<td>A76</td>
+													<td>Atl Inlicensed ECO</td>
+													<td>YD26175</td>
+													<td>CRITCHLEY TRACY ELIZABETH</td>
+													<td>13-Nov-2013 08:48</td>
+													<td>AARON DIMECH</td>
+												</tr>
+												<tr>
+													<td>A77</td>
+													<td>AtlInlicense Orion</td>
+													<td>YD26175</td>
+													<td>Tracy Elizabeth Critchley</td>
+													<td>26-Apr-2020 19:07</td>
+													<td>Srikanth Tekumudi</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="tab-pane" id="Categories">
+						<div class="row">
+							<div class="col-sm-12">
+								<div class="white-box">
+									<div class="row">
+										<div class="col-sm-3 col-md-2">
+											<form class="fix-form"> 
+												<div class="form-group">
+													<label for="Controller">Controller</label>
+													<input type="text" class="form-control" id="Controller"
+														placeholder="Controller">
+												</div>
+												<div class="form-group">
+													<label for="TeamName">Team Name</label>
+													<input type="text" class="form-control" id="TeamName"
+														placeholder="Team Name">
+												</div>
+												<div class="form-group">
+													<label for="TeamName">Team Name</label>
+													<input type="text" class="form-control" id="TeamName"
+														placeholder="Team Name 2">
+												</div>
+												<div class="form-group">
+													<label for="BusinessOwner">Business Owner</label>
+													<input type="text" class="form-control" id="BusinessOwner"
+														placeholder="Business Owner">
+												</div>
+		
+												<div class="action">
+													<button type="submit" class="btn btn-block">Insert</button>
+												</div>
+											</form>
+										</div>
+										<div class="col-sm-9 col-md-10">
+											<div class="table-responsive">
+												<table class="table">
+													<tbody>
+														<tr>
+															<th scope="col">Ctlr</th>
+															<th scope="col">Team</th>
+															<th scope="col">Business Owner</th>
+															<th scope="col">&nbsp;</th>
+															<th scope="col">Last Updated</th>
+															<th scope="col">By</th>
+														</tr>
+		
+														<td>1</td>
+														<td>salvage plants</td>
+														<td>YD79142 </td>
+														<td>David Anthony Cromby</td>
+														<td>08-Feb-2017 11:04</td>
+														<td>CATHERINE STAGG</td>
+														</tr>
+														<tr>
+															<td>90</td>
+															<td>Deleted Items</td>
+															<td>YD79142 </td>
+															<td>David Anthony Cromby</td>
+															<td>08-Feb-2017 11:04</td>
+															<td>CATHERINE STAGG</td>
+														</tr>
+														<tr>
+															<td>A51</td>
+															<td>Biovet</td>
+															<td>YD26175</td>
+															<td>CRITCHLEY TRACY ELIZABETH</td>
+															<td>13-Nov-2013 08:48</td>
+															<td>Jeffrey Mark</td>
+														</tr>
+														<tr>
+															<td>A52</td>
+															<td>Janssen FP</td>
+															<td>YD26175</td>
+															<td>CRITCHLEY TRACY ELIZABETH</td>
+															<td>13-Nov-2013 08:48</td>
+															<td>AARON DIMECH</td>
+														</tr>
+														<tr>
+															<td>A53</td>
+															<td>Telmin - Janseen</td>
+															<td>YD26175</td>
+															<td>CRITCHLEY TRACY ELIZABETH</td>
+															<td>31-Dec-2013 10:21</td>
+															<td>AARON DIMECH</td>
+														</tr>
+														<tr>
+		
+															<td>A54</td>
+															<td>Janseen</td>
+															<td>YD26175</td>
+															<td>CRITCHLEY TRACY ELIZABETH</td>
+															<td>31-Dec-2013 10:30</td>
+															<td>AARON DIMECH</td>
+														</tr>
+														<tr>
+															<td>A55</td>
+															<td>Lusomedicamenta</td>
+															<td>YD26175</td>
+															<td>CRITCHLEY TRACY ELIZABETH</td>
+															<td>13-Nov-2013 08:48</td>
+															<td>AARON DIMECH</td>
+														</tr>
+														<tr>
+															<td>A56</td>
+															<td>Provimi Ex- Atlantic</td>
+															<td>YD26175</td>
+															<td>CRITCHLEY TRACY ELIZABETH</td>
+															<td>31-Dec-2013 10:49</td>
+															<td>AARON DIMECH</td>
+														</tr>
+														<tr>
+															<td>A57</td>
+															<td>Octavius Hunt</td>
+															<td>YD26175</td>
+															<td>CRITCHLEY TRACY ELIZABETH</td>
+															<td>13-Nov-2013 08:48</td>
+															<td>AARON DIMECH</td>
+														</tr>
+														<tr>
+															<td>A58</td>
+															<td>Sanochemia</td>
+															<td>YD26175</td>
+															<td>CRITCHLEY TRACY ELIZABETH</td>
+															<td>24-Jun-2016 14:27</td>
+															<td>XINYU GIORGIONI</td>
+														</tr>
+														<tr>
+															<td>A59</td>
+															<td>Sanico</td>
+															<td>YD26175</td>
+															<td>CRITCHLEY TRACY ELIZABETH</td>
+															<td>13-Nov-2013 08:48</td>
+															<td>AARON DIMECH</td>
+														</tr>
+														<tr>
+															<td>A60</td>
+															<td>Smeets</td>
+															<td>YD26175</td>
+															<td>CRITCHLEY TRACY ELIZABETH</td>
+															<td>13-Nov-2013 08:48</td>
+															<td>AARON DIMECH</td>
+														</tr>
+														<tr>
+															<td>A61</td>
+															<td>Yabang</td>
+															<td>YD26175</td>
+															<td>CRITCHLEY TRACY ELIZABETH</td>
+															<td>31-Dec-2013 11:24</td>
+															<td>AARON DIMECH</td>
+														</tr>
+														<tr>
+															<td>A62</td>
+															<td>Janseen API Keto</td>
+															<td>YD26175</td>
+															<td>CRITCHLEY TRACY ELIZABETH</td>
+															<td>31-Dec-2013 11:37</td>
+															<td>AARON DIMECH</td>
+														</tr>
+														<tr>
+		
+															<td>A66</td>
+															<td>various API suppliers</td>
+															<td>YD26175</td>
+															<td>CRITCHLEY TRACY ELIZABETH</td>
+															<td>31-Dec-2013 11:48</td>
+															<td>AARON DIMECH</td>
+														</tr>
+														<tr>
+															<td>A69</td>
+															<td>various API suppliers</td>
+															<td>YD26175</td>
+															<td>CRITCHLEY TRACY ELIZABETH</td>
+															<td>31-Dec-2013 12:20</td>
+															<td>AARON DIMECH</td>
+														</tr>
+														<tr>
+															<td>A72</td>
+															<td>China/Janseen APIs</td>
+															<td>YD26175</td>
+															<td>CRITCHLEY TRACY ELIZABETH</td>
+															<td>13-Nov-2013 08:48</td>
+															<td>AARON DIMECH</td>
+														</tr>
+														<tr>
+															<td>A75</td>
+															<td>Alt inlicenced gp1</td>
+															<td>YD26175</td>
+															<td>CRITCHLEY TRACY ELIZABETH</td>
+															<td>13-Nov-2013 08:48</td>
+															<td>AARON DIMECH</td>
+														</tr>
+														<tr>
+															<td>A76</td>
+															<td>Atl Inlicensed ECO</td>
+															<td>YD26175</td>
+															<td>CRITCHLEY TRACY ELIZABETH</td>
+															<td>13-Nov-2013 08:48</td>
+															<td>AARON DIMECH</td>
+														</tr>
+														<tr>
+															<td>A77</td>
+															<td>AtlInlicense Orion</td>
+															<td>YD26175</td>
+															<td>Tracy Elizabeth Critchley</td>
+															<td>26-Apr-2020 19:07</td>
+															<td>Srikanth Tekumudi</td>
+														</tr>
+														<tr>
+															<td>A76</td>
+															<td>Atl Inlicensed ECO</td>
+															<td>YD26175</td>
+															<td>CRITCHLEY TRACY ELIZABETH</td>
+															<td>13-Nov-2013 08:48</td>
+															<td>AARON DIMECH</td>
+														</tr>
+														<tr>
+															<td>A77</td>
+															<td>AtlInlicense Orion</td>
+															<td>YD26175</td>
+															<td>Tracy Elizabeth Critchley</td>
+															<td>26-Apr-2020 19:07</td>
+															<td>Srikanth Tekumudi</td>
+														</tr>
+														<tr>
+															<td>A76</td>
+															<td>Atl Inlicensed ECO</td>
+															<td>YD26175</td>
+															<td>CRITCHLEY TRACY ELIZABETH</td>
+															<td>13-Nov-2013 08:48</td>
+															<td>AARON DIMECH</td>
+														</tr>
+														<tr>
+															<td>A77</td>
+															<td>AtlInlicense Orion</td>
+															<td>YD26175</td>
+															<td>Tracy Elizabeth Critchley</td>
+															<td>26-Apr-2020 19:07</td>
+															<td>Srikanth Tekumudi</td>
+														</tr>
+														<tr>
+															<td>A76</td>
+															<td>Atl Inlicensed ECO</td>
+															<td>YD26175</td>
+															<td>CRITCHLEY TRACY ELIZABETH</td>
+															<td>13-Nov-2013 08:48</td>
+															<td>AARON DIMECH</td>
+														</tr>
+														<tr>
+															<td>A77</td>
+															<td>AtlInlicense Orion</td>
+															<td>YD26175</td>
+															<td>Tracy Elizabeth Critchley</td>
+															<td>26-Apr-2020 19:07</td>
+															<td>Srikanth Tekumudi</td>
+														</tr>
+														<tr>
+															<td>A76</td>
+															<td>Atl Inlicensed ECO</td>
+															<td>YD26175</td>
+															<td>CRITCHLEY TRACY ELIZABETH</td>
+															<td>13-Nov-2013 08:48</td>
+															<td>AARON DIMECH</td>
+														</tr>
+														<tr>
+															<td>A77</td>
+															<td>AtlInlicense Orion</td>
+															<td>YD26175</td>
+															<td>Tracy Elizabeth Critchley</td>
+															<td>26-Apr-2020 19:07</td>
+															<td>Srikanth Tekumudi</td>
+														</tr>
+														<tr>
+															<td>A76</td>
+															<td>Atl Inlicensed ECO</td>
+															<td>YD26175</td>
+															<td>CRITCHLEY TRACY ELIZABETH</td>
+															<td>13-Nov-2013 08:48</td>
+															<td>AARON DIMECH</td>
+														</tr>
+														<tr>
+															<td>A77</td>
+															<td>AtlInlicense Orion</td>
+															<td>YD26175</td>
+															<td>Tracy Elizabeth Critchley</td>
+															<td>26-Apr-2020 19:07</td>
+															<td>Srikanth Tekumudi</td>
+														</tr>
+														<tr>
+															<td>A76</td>
+															<td>Atl Inlicensed ECO</td>
+															<td>YD26175</td>
+															<td>CRITCHLEY TRACY ELIZABETH</td>
+															<td>13-Nov-2013 08:48</td>
+															<td>AARON DIMECH</td>
+														</tr>
+														<tr>
+															<td>A77</td>
+															<td>AtlInlicense Orion</td>
+															<td>YD26175</td>
+															<td>Tracy Elizabeth Critchley</td>
+															<td>26-Apr-2020 19:07</td>
+															<td>Srikanth Tekumudi</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</div>
+									</div>	
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="tab-pane" id="FinancialFilters">
+						<div class="row">
+							<div class="col-sm-12">
+								<div class="white-box">
+									<div class="row">
+										<div class="col-sm-9 col-md-10">
+											<div class="table-responsive">
+												<table class="table">
+													<tbody>
+														<tr>
+															<th scope="col">Ctlr</th>
+															<th scope="col">Team</th>
+															<th scope="col">Business Owner</th>
+															<th scope="col">&nbsp;</th>
+															<th scope="col">Last Updated</th>
+															<th scope="col">By</th>
+														</tr>
+		
+														<td>1</td>
+														<td>salvage plants</td>
+														<td>YD79142 </td>
+														<td>David Anthony Cromby</td>
+														<td>08-Feb-2017 11:04</td>
+														<td>CATHERINE STAGG</td>
+														</tr>
+														<tr>
+															<td>90</td>
+															<td>Deleted Items</td>
+															<td>YD79142 </td>
+															<td>David Anthony Cromby</td>
+															<td>08-Feb-2017 11:04</td>
+															<td>CATHERINE STAGG</td>
+														</tr>
+														<tr>
+															<td>A51</td>
+															<td>Biovet</td>
+															<td>YD26175</td>
+															<td>CRITCHLEY TRACY ELIZABETH</td>
+															<td>13-Nov-2013 08:48</td>
+															<td>Jeffrey Mark</td>
+														</tr>
+														<tr>
+															<td>A52</td>
+															<td>Janssen FP</td>
+															<td>YD26175</td>
+															<td>CRITCHLEY TRACY ELIZABETH</td>
+															<td>13-Nov-2013 08:48</td>
+															<td>AARON DIMECH</td>
+														</tr>
+														<tr>
+															<td>A53</td>
+															<td>Telmin - Janseen</td>
+															<td>YD26175</td>
+															<td>CRITCHLEY TRACY ELIZABETH</td>
+															<td>31-Dec-2013 10:21</td>
+															<td>AARON DIMECH</td>
+														</tr>
+														<tr>
+		
+															<td>A54</td>
+															<td>Janseen</td>
+															<td>YD26175</td>
+															<td>CRITCHLEY TRACY ELIZABETH</td>
+															<td>31-Dec-2013 10:30</td>
+															<td>AARON DIMECH</td>
+														</tr>
+														<tr>
+															<td>A55</td>
+															<td>Lusomedicamenta</td>
+															<td>YD26175</td>
+															<td>CRITCHLEY TRACY ELIZABETH</td>
+															<td>13-Nov-2013 08:48</td>
+															<td>AARON DIMECH</td>
+														</tr>
+														<tr>
+															<td>A56</td>
+															<td>Provimi Ex- Atlantic</td>
+															<td>YD26175</td>
+															<td>CRITCHLEY TRACY ELIZABETH</td>
+															<td>31-Dec-2013 10:49</td>
+															<td>AARON DIMECH</td>
+														</tr>
+														<tr>
+															<td>A57</td>
+															<td>Octavius Hunt</td>
+															<td>YD26175</td>
+															<td>CRITCHLEY TRACY ELIZABETH</td>
+															<td>13-Nov-2013 08:48</td>
+															<td>AARON DIMECH</td>
+														</tr>
+														<tr>
+															<td>A58</td>
+															<td>Sanochemia</td>
+															<td>YD26175</td>
+															<td>CRITCHLEY TRACY ELIZABETH</td>
+															<td>24-Jun-2016 14:27</td>
+															<td>XINYU GIORGIONI</td>
+														</tr>
+														<tr>
+															<td>A59</td>
+															<td>Sanico</td>
+															<td>YD26175</td>
+															<td>CRITCHLEY TRACY ELIZABETH</td>
+															<td>13-Nov-2013 08:48</td>
+															<td>AARON DIMECH</td>
+														</tr>
+														<tr>
+															<td>A60</td>
+															<td>Smeets</td>
+															<td>YD26175</td>
+															<td>CRITCHLEY TRACY ELIZABETH</td>
+															<td>13-Nov-2013 08:48</td>
+															<td>AARON DIMECH</td>
+														</tr>
+														<tr>
+															<td>A61</td>
+															<td>Yabang</td>
+															<td>YD26175</td>
+															<td>CRITCHLEY TRACY ELIZABETH</td>
+															<td>31-Dec-2013 11:24</td>
+															<td>AARON DIMECH</td>
+														</tr>
+														<tr>
+															<td>A62</td>
+															<td>Janseen API Keto</td>
+															<td>YD26175</td>
+															<td>CRITCHLEY TRACY ELIZABETH</td>
+															<td>31-Dec-2013 11:37</td>
+															<td>AARON DIMECH</td>
+														</tr>
+														<tr>
+		
+															<td>A66</td>
+															<td>various API suppliers</td>
+															<td>YD26175</td>
+															<td>CRITCHLEY TRACY ELIZABETH</td>
+															<td>31-Dec-2013 11:48</td>
+															<td>AARON DIMECH</td>
+														</tr>
+														<tr>
+															<td>A69</td>
+															<td>various API suppliers</td>
+															<td>YD26175</td>
+															<td>CRITCHLEY TRACY ELIZABETH</td>
+															<td>31-Dec-2013 12:20</td>
+															<td>AARON DIMECH</td>
+														</tr>
+														<tr>
+															<td>A72</td>
+															<td>China/Janseen APIs</td>
+															<td>YD26175</td>
+															<td>CRITCHLEY TRACY ELIZABETH</td>
+															<td>13-Nov-2013 08:48</td>
+															<td>AARON DIMECH</td>
+														</tr>
+														<tr>
+															<td>A75</td>
+															<td>Alt inlicenced gp1</td>
+															<td>YD26175</td>
+															<td>CRITCHLEY TRACY ELIZABETH</td>
+															<td>13-Nov-2013 08:48</td>
+															<td>AARON DIMECH</td>
+														</tr>
+														<tr>
+															<td>A76</td>
+															<td>Atl Inlicensed ECO</td>
+															<td>YD26175</td>
+															<td>CRITCHLEY TRACY ELIZABETH</td>
+															<td>13-Nov-2013 08:48</td>
+															<td>AARON DIMECH</td>
+														</tr>
+														<tr>
+															<td>A77</td>
+															<td>AtlInlicense Orion</td>
+															<td>YD26175</td>
+															<td>Tracy Elizabeth Critchley</td>
+															<td>26-Apr-2020 19:07</td>
+															<td>Srikanth Tekumudi</td>
+														</tr>
+														<tr>
+															<td>A76</td>
+															<td>Atl Inlicensed ECO</td>
+															<td>YD26175</td>
+															<td>CRITCHLEY TRACY ELIZABETH</td>
+															<td>13-Nov-2013 08:48</td>
+															<td>AARON DIMECH</td>
+														</tr>
+														<tr>
+															<td>A77</td>
+															<td>AtlInlicense Orion</td>
+															<td>YD26175</td>
+															<td>Tracy Elizabeth Critchley</td>
+															<td>26-Apr-2020 19:07</td>
+															<td>Srikanth Tekumudi</td>
+														</tr>
+														<tr>
+															<td>A76</td>
+															<td>Atl Inlicensed ECO</td>
+															<td>YD26175</td>
+															<td>CRITCHLEY TRACY ELIZABETH</td>
+															<td>13-Nov-2013 08:48</td>
+															<td>AARON DIMECH</td>
+														</tr>
+														<tr>
+															<td>A77</td>
+															<td>AtlInlicense Orion</td>
+															<td>YD26175</td>
+															<td>Tracy Elizabeth Critchley</td>
+															<td>26-Apr-2020 19:07</td>
+															<td>Srikanth Tekumudi</td>
+														</tr>
+														<tr>
+															<td>A76</td>
+															<td>Atl Inlicensed ECO</td>
+															<td>YD26175</td>
+															<td>CRITCHLEY TRACY ELIZABETH</td>
+															<td>13-Nov-2013 08:48</td>
+															<td>AARON DIMECH</td>
+														</tr>
+														<tr>
+															<td>A77</td>
+															<td>AtlInlicense Orion</td>
+															<td>YD26175</td>
+															<td>Tracy Elizabeth Critchley</td>
+															<td>26-Apr-2020 19:07</td>
+															<td>Srikanth Tekumudi</td>
+														</tr>
+														<tr>
+															<td>A76</td>
+															<td>Atl Inlicensed ECO</td>
+															<td>YD26175</td>
+															<td>CRITCHLEY TRACY ELIZABETH</td>
+															<td>13-Nov-2013 08:48</td>
+															<td>AARON DIMECH</td>
+														</tr>
+														<tr>
+															<td>A77</td>
+															<td>AtlInlicense Orion</td>
+															<td>YD26175</td>
+															<td>Tracy Elizabeth Critchley</td>
+															<td>26-Apr-2020 19:07</td>
+															<td>Srikanth Tekumudi</td>
+														</tr>
+														<tr>
+															<td>A76</td>
+															<td>Atl Inlicensed ECO</td>
+															<td>YD26175</td>
+															<td>CRITCHLEY TRACY ELIZABETH</td>
+															<td>13-Nov-2013 08:48</td>
+															<td>AARON DIMECH</td>
+														</tr>
+														<tr>
+															<td>A77</td>
+															<td>AtlInlicense Orion</td>
+															<td>YD26175</td>
+															<td>Tracy Elizabeth Critchley</td>
+															<td>26-Apr-2020 19:07</td>
+															<td>Srikanth Tekumudi</td>
+														</tr>
+														<tr>
+															<td>A76</td>
+															<td>Atl Inlicensed ECO</td>
+															<td>YD26175</td>
+															<td>CRITCHLEY TRACY ELIZABETH</td>
+															<td>13-Nov-2013 08:48</td>
+															<td>AARON DIMECH</td>
+														</tr>
+														<tr>
+															<td>A77</td>
+															<td>AtlInlicense Orion</td>
+															<td>YD26175</td>
+															<td>Tracy Elizabeth Critchley</td>
+															<td>26-Apr-2020 19:07</td>
+															<td>Srikanth Tekumudi</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</div>
+										<div class="col-sm-3 col-md-2">
+											<form class="fix-form"> 
+												<div class="form-group">
+													<label for="Controller">Controller</label>
+													<input type="text" class="form-control" id="Controller"
+														placeholder="Controller">
+												</div>
+												<div class="form-group">
+													<label for="TeamName">Team Name</label>
+													<input type="text" class="form-control" id="TeamName"
+														placeholder="Team Name">
+												</div>
+												<div class="form-group">
+													<label for="TeamName">Team Name</label>
+													<input type="text" class="form-control" id="TeamName"
+														placeholder="Team Name 2">
+												</div>
+												<div class="form-group">
+													<label for="BusinessOwner">Business Owner</label>
+													<input type="text" class="form-control" id="BusinessOwner"
+														placeholder="Business Owner">
+												</div>
+		
+												<div class="action">
+													<button type="submit" class="btn btn-block">Insert</button>
+												</div>
+											</form>
+										</div>
+									</div>	
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+			</div>
+		</main>
+		<footer class="footer text-center">Version: 2.3 Deployed: 14-May-2018 Instance: Test - TST1221</footer>
+	</div>
+	<div class="disabled"></div>
+	<div class="loader-sec">
+		<div class="loader">
+				
+	<div class="load">
+	  <div class="gear one">
+		<svg id="blue" viewBox="0 0 100 100" fill="#f1f1f1">
+		  <path d="M97.6,55.7V44.3l-13.6-2.9c-0.8-3.3-2.1-6.4-3.9-9.3l7.6-11.7l-8-8L67.9,20c-2.9-1.7-6-3.1-9.3-3.9L55.7,2.4H44.3l-2.9,13.6      c-3.3,0.8-6.4,2.1-9.3,3.9l-11.7-7.6l-8,8L20,32.1c-1.7,2.9-3.1,6-3.9,9.3L2.4,44.3v11.4l13.6,2.9c0.8,3.3,2.1,6.4,3.9,9.3      l-7.6,11.7l8,8L32.1,80c2.9,1.7,6,3.1,9.3,3.9l2.9,13.6h11.4l2.9-13.6c3.3-0.8,6.4-2.1,9.3-3.9l11.7,7.6l8-8L80,67.9      c1.7-2.9,3.1-6,3.9-9.3L97.6,55.7z M50,65.6c-8.7,0-15.6-7-15.6-15.6s7-15.6,15.6-15.6s15.6,7,15.6,15.6S58.7,65.6,50,65.6z"></path>
+		</svg>
+	  </div>
+	  <div class="gear two">
+		<svg id="pink" viewBox="0 0 100 100" fill="#999">
+		  <path d="M97.6,55.7V44.3l-13.6-2.9c-0.8-3.3-2.1-6.4-3.9-9.3l7.6-11.7l-8-8L67.9,20c-2.9-1.7-6-3.1-9.3-3.9L55.7,2.4H44.3l-2.9,13.6      c-3.3,0.8-6.4,2.1-9.3,3.9l-11.7-7.6l-8,8L20,32.1c-1.7,2.9-3.1,6-3.9,9.3L2.4,44.3v11.4l13.6,2.9c0.8,3.3,2.1,6.4,3.9,9.3      l-7.6,11.7l8,8L32.1,80c2.9,1.7,6,3.1,9.3,3.9l2.9,13.6h11.4l2.9-13.6c3.3-0.8,6.4-2.1,9.3-3.9l11.7,7.6l8-8L80,67.9      c1.7-2.9,3.1-6,3.9-9.3L97.6,55.7z M50,65.6c-8.7,0-15.6-7-15.6-15.6s7-15.6,15.6-15.6s15.6,7,15.6,15.6S58.7,65.6,50,65.6z"></path>
+		</svg>
+	  </div>
+	  <div class="gear three">
+		<svg id="yellow" viewBox="0 0 100 100" fill="#666">
+		  <path d="M97.6,55.7V44.3l-13.6-2.9c-0.8-3.3-2.1-6.4-3.9-9.3l7.6-11.7l-8-8L67.9,20c-2.9-1.7-6-3.1-9.3-3.9L55.7,2.4H44.3l-2.9,13.6      c-3.3,0.8-6.4,2.1-9.3,3.9l-11.7-7.6l-8,8L20,32.1c-1.7,2.9-3.1,6-3.9,9.3L2.4,44.3v11.4l13.6,2.9c0.8,3.3,2.1,6.4,3.9,9.3      l-7.6,11.7l8,8L32.1,80c2.9,1.7,6,3.1,9.3,3.9l2.9,13.6h11.4l2.9-13.6c3.3-0.8,6.4-2.1,9.3-3.9l11.7,7.6l8-8L80,67.9      c1.7-2.9,3.1-6,3.9-9.3L97.6,55.7z M50,65.6c-8.7,0-15.6-7-15.6-15.6s7-15.6,15.6-15.6s15.6,7,15.6,15.6S58.7,65.6,50,65.6z"></path>
+		</svg>
+	  </div>
+	 </div>
+	</div>
+	</div>
+	<script src="./js/jquery.min.js"></script>
+	<script src="./js/bootstrap.min.js"></script>
+	<script src="./js/parsley.min.js"></script>
+	<script src="./js/main.js"></script>
+
+</body>
+</html>

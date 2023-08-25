@@ -1,0 +1,67 @@
+.card {
+	position: relative;
+}
+.accordion .btn-link {
+	font-size: 14px;
+	width: 100%;
+	text-align: left;
+	padding-left: 0;
+	padding-right: 0;
+	border-radius: 3px;
+	border: 0;
+	display: block;
+}
+.accordion .btn-link:hover {
+	text-decoration: none;
+	outline: none;
+}
+.accordion .btn-link:focus {
+	outline: none;
+	text-decoration: none;
+}
+.card-header {
+	transition: 0.5s all ease;
+}
+.card-header:hover {
+	transition: 0.5s all ease;
+}
+.card-body ul {
+	padding: 0;
+}
+.card-body ul li {
+	font-weight: 400;
+	line-height: 1.9;
+	font-size: 13px;
+}
+.card-body ul li input {
+	margin-right: 5px;
+}
+.card-body ul li.red {
+	color: rgba(243, 49, 85, 1);
+}
+.card-body ul li.blue {
+	color: rgba(88, 86, 199, 0.8);
+}
+.card-body ul li.yellow {
+	color: rgb(243, 186, 82);
+}
+.card-body ul li.green {
+	color: rgb(80, 169, 58);
+}
+.accordion i.arrow {
+	float: right;
+	position: relative;
+	margin-top: 5px;
+	margin-right: 7px;
+}
+.accordion i.arrow span {
+	position: absolute;
+	height: 7px;
+	width: 2px;
+	background: #0072CE;
+	transform: rotate(40deg);
+}
+.accordion i.arrow span:last-child {
+	transform: rotate(-40deg);
+	margin: 0px -4px;
+}

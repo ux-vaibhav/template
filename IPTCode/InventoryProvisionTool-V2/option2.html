@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>ITP</title>
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/style3.css" rel="stylesheet">
+</head>
+<body class="fix-header">
+	<div id="wrapper">
+		<nav class="navbar navbar-default navbar-static-top m-b-0">
+			<div class="navbar-header">
+				<div class="pull-left menu-icon">
+					<!-- <img src="./img/tool.png"/> -->
+					<span></span><span></span><span></span>
+				</div>
+				<div class="tagline col-xs-4">Inventory Provision Tool</div>
+				<ul class="nav navbar-top-links navbar-right pull-right">
+					<li> <a class="nav-toggler open-close waves-effect waves-light hidden-md hidden-lg" href="javascript:void(0)"><i
+                class="fa fa-bars"></i></a>
+					</li>
+					<li> <a class="profile-pic" href="#">Welcome Shah Sameer (C282551) Site - Liverpool</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+		<div class="navbar-default sidebar" role="navigation">
+			<div class="sidebar-nav slimscrollsidebar">
+				<div class="accordion" id="accordionExample">
+					<div class="card">
+						<div class="card-header" id="headingOne">
+							<h2 class="mb-0">
+                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne"
+                  aria-expanded="true" aria-controls="collapseOne">
+                  Row Type <i class="arrow"><span></span><span></span></i>
+                </button>
+              </h2>
+						</div>
+						<div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+							<div class="card-body">
+								<ul class="list-unstyled">
+									<li>Total (28)</li>
+									<li class="red">Not reviewed HVI (0)</li>
+									<li class="red">Not reviewed LVI (0)</li>
+									<li class="blue">No Primary review (0)</li>
+									<li class="yellow">
+										<input id="ctl00_WebUserControl_primaryCheckBox" type="checkbox" name="ctl00$WebUserControl$primaryCheckBox" checked="checked">No Functional review (9)</li>
+									<li class="green">
+										<input id="ctl00_WebUserControl_primaryCheckBox" type="checkbox" name="ctl00$WebUserControl$primaryCheckBox" checked="checked">Review complete (19)</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="card">
+						<div class="card-header" id="headingTwo">
+							<h2 class="mb-0">
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo"
+                  aria-expanded="false" aria-controls="collapseTwo">
+                  Business Area <i class="arrow"><span></span><span></span></i>
+                </button>
+              </h2>
+						</div>
+						<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+							<div class="card-body">
+								<ul class="list-unstyled">
+									<li>
+										<input id="ctl00_WebUserControl_primaryCheckBox" type="checkbox" name="ctl00$WebUserControl$primaryCheckBox" checked="checked">EEM-EU Legacy</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="card">
+						<div class="card-header" id="headingThree">
+							<h2 class="mb-0">
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree"
+                  aria-expanded="false" aria-controls="collapseThree">
+                  Plant <i class="arrow"><span></span><span></span></i>
+                </button>
+              </h2>
+						</div>
+						<div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+							<div class="card-body">
+								<ul class="list-unstyled">
+									<li>
+										<input id="ctl00_WebUserControl_primaryCheckBox" type="checkbox" name="ctl00$WebUserControl$primaryCheckBox" checked="checked">0733</li>
+									<li>
+										<input id="ctl00_WebUserControl_primaryCheckBox" type="checkbox" name="ctl00$WebUserControl$primaryCheckBox" checked="checked">0751</li>
+									<li>
+										<input id="ctl00_WebUserControl_primaryCheckBox" type="checkbox" name="ctl00$WebUserControl$primaryCheckBox" checked="checked">0510
+										<li>
+											<input id="ctl00_WebUserControl_primaryCheckBox" type="checkbox" name="ctl00$WebUserControl$primaryCheckBox" checked="checked">0127</li>
+										<li>
+											<input id="ctl00_WebUserControl_primaryCheckBox" type="checkbox" name="ctl00$WebUserControl$primaryCheckBox" checked="checked">0509</li>
+										<li>
+											<input id="ctl00_WebUserControl_primaryCheckBox" type="checkbox" name="ctl00$WebUserControl$primaryCheckBox" checked="checked">0737</li>
+										<li>
+											<input id="ctl00_WebUserControl_primaryCheckBox" type="checkbox" name="ctl00$WebUserControl$primaryCheckBox" checked="checked">0590</li>
+										<li>
+											<input id="ctl00_WebUserControl_primaryCheckBox" type="checkbox" name="ctl00$WebUserControl$primaryCheckBox" checked="checked">R751</li>
+										<li>
+											<input id="ctl00_WebUserControl_primaryCheckBox" type="checkbox" name="ctl00$WebUserControl$primaryCheckBox" checked="checked">0840</li>
+							</div>
+						</div>
+					</div>
+					<div class="card">
+						<div class="card-header" id="headingFour">
+							<h2 class="mb-0">
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour"
+                  aria-expanded="false" aria-controls="collapseFour">
+                  Filter applied <i class="arrow"><span></span><span></span></i>
+                </button>
+              </h2>
+						</div>
+						<div id="collapseFour" class="collapse" aria-labelledby="headingfour" data-parent="#accordionExample">
+							<div class="card-body">
+								<ul class="list-unstyled">
+									<li>
+										<input id="ctl00_WebUserControl_primaryCheckBox" type="checkbox" name="ctl00$WebUserControl$primaryCheckBox" checked="checked">Last Moved</li>
+									<li>
+										<input id="ctl00_WebUserControl_primaryCheckBox" type="checkbox" name="ctl00$WebUserControl$primaryCheckBox" checked="checked">Expired</li>
+									<li>
+										<input id="ctl00_WebUserControl_primaryCheckBox" type="checkbox" name="ctl00$WebUserControl$primaryCheckBox" checked="checked">Close to Expiry</li>
+									<li>
+										<input id="ctl00_WebUserControl_primaryCheckBox" type="checkbox" name="ctl00$WebUserControl$primaryCheckBox" checked="checked">Blocked</li>
+									<li>
+										<input id="ctl00_WebUserControl_primaryCheckBox" type="checkbox" name="ctl00$WebUserControl$primaryCheckBox" checked="checked">In Q</li>
+									<li>
+										<input id="ctl00_WebUserControl_primaryCheckBox" type="checkbox" name="ctl00$WebUserControl$primaryCheckBox" checked="checked">Tylosin</li>
+									<li>
+										<input id="ctl00_WebUserControl_primaryCheckBox" type="checkbox" name="ctl00$WebUserControl$primaryCheckBox" checked="checked">Reprocess R751</li>
+							</div>
+						</div>
+					</div>
+					<div class="card">
+						<div class="card-header" id="headingFive">
+							<h2 class="mb-0">
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFive"
+                  aria-expanded="false" aria-controls="collapseFive">
+                  Controllers <i class="arrow"><span></span><span></span></i>
+                </button>
+              </h2>
+						</div>
+						<div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
+							<div class="card-body">
+								<ul class="list-unstyled">
+									<li>
+										<input id="ctl00_WebUserControl_primaryCheckBox" type="checkbox" name="ctl00$WebUserControl$primaryCheckBox" checked="checked">90</li>
+									<li>
+										<input id="ctl00_WebUserControl_primaryCheckBox" type="checkbox" name="ctl00$WebUserControl$primaryCheckBox" checked="checked">A52</li>
+									<li>
+										<input id="ctl00_WebUserControl_primaryCheckBox" type="checkbox" name="ctl00$WebUserControl$primaryCheckBox" checked="checked">A72</li>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="center p-20">
+					<p>Period</p>
+					<select>
+						<option value="01">01</option>
+						<option value="02">02</option>
+						<option value="03">03</option>
+						<option value="04">04</option>
+						<option value="05">05</option>
+						<option value="06">06</option>
+						<option value="07">07</option>
+						<option value="08">08</option>
+						<option value="09">09</option>
+						<option selected="selected" value="10">10</option>
+						<option value="11">11</option>
+						<option value="12">12</option>
+					</select>
+					<p>Year</p>
+					<select>
+						<option value="2013">2013</option>
+						<option value="2014">2014</option>
+						<option value="2015">2015</option>
+						<option value="2016">2016</option>
+						<option selected="selected" value="2017">2017</option>
+					</select> <a href="#" target="_blank" class="btn btn-danger btn-block view">Refresh View</a>
+				</div>
+			</div>
+		</div>
+		<div id="page-wrapper">
+			<div class="container-fluid">
+				<div class="row bg-title">
+					<div class="flex">
+						<input type="button" class="btn btn-danger" value="ZS123 Load">
+						<input type="button" class="btn btn-danger" value="B/F Previous">
+						<input type="button" class="btn btn-danger" value="Start Review">
+						<input type="button" class="btn btn-danger" value="Close Review">
+						<input type="button" class="btn btn-danger" value="Re-Open Review">
+						<input type="button" class="btn btn-danger" value="Delete Review">
+						<input type="button" class="btn btn-danger" value="Upload">
+						<input type="button" class="btn btn-danger" value="Email Primary">
+						<input type="button" class="btn btn-danger" value="Email Functional">
+					</div>
+				</div>
+				<ul class="nav nav-tabs" role="tablist">
+					<li class="active">
+						<a href="#maintenance" role="tab" data-toggle="tab">
+							<h3 class="box-title">Inventory Maintenance (Low value items)</h3>
+						</a>
+					</li>
+					<li>
+						<a href="#review" role="tab" data-toggle="tab">
+							<h3 class="box-title">Inventory Review (Higher value items)</h3>
+						</a>
+					</li>
+				</ul>
+				<div class="tab-content">
+					<div class="tab-pane fade active in" id="maintenance">
+						<div class="row">
+							<div class="col-sm-12">
+								<div class="white-box">
+									<div class="table-responsive">
+										<table class="table">
+											<tbody>
+												<tr>
+													<th><span style="width:245px;display:block;">Name</span></th>
+													<th>Plant</th>
+													<th>Ctlr</th>
+													<th>Type</th>
+													<th>Material</th>
+													<th>Description</th>
+													<th>INV_LOCATION</th>
+													<th>Batch</th>
+													<th>Expiry/Creation</th>
+													<th><span style="width:70px;display:block;">Last</span></th>
+													<th>Moved</th>
+													<th>Days</th>
+													<th>Status</th>
+													<th>Qty</th>
+													<th>UOM</th>
+													<th>Value</th>
+													<th>Curr</th>
+												</tr>
+												<tr>
+													<td align="left">Primary &amp; Functional review confirmed</td>
+													<td align="left">0751</td>
+													<td>A72</td>
+													<td>HALB</td>
+													<td align="left">QA540Q02</td>
+													<td align="left">FLUBENDAZOLE</td>
+													<td>18</td>
+													<td align="left">C767796</td>
+													<td align="left">13-Jul-19</td>
+													<td align="left">02-May-17</td>
+													<td align="right">155</td>
+													<td>Q</td>
+													<td align="right">6.000</td>
+													<td>KG</td>
+													<td align="right">31971.50</td>
+													<td>GBP</td>
+													<td align="left">OK</td>
+												</tr>
+												<tr>
+													<td align="left">Primary &amp; Functional review confirmed</td>
+													<td align="left">0751</td>
+													<td>A72</td>
+													<td>HALB</td>
+													<td align="left">QA540H01</td>
+													<td align="left">ENILCONAZOLE</td>
+													<td>100</td>
+													<td align="left">C460185</td>
+													<td align="left">17-Jan-18</td>
+													<td align="left">07-Mar-16</td>
+													<td align="right">576</td>
+													<td>U</td>
+													<td align="right">7.000</td>
+													<td>KG</td>
+													<td align="right">73891.28</td>
+													<td>GBP</td>
+													<td align="left">OK</td>
+												</tr>
+												<tr>
+													<td align="left">Primary &amp; Functional review confirmed</td>
+													<td align="left">0751</td>
+													<td>A52</td>
+													<td>HALB</td>
+													<td align="left">QA540N25KFF</td>
+													<td align="left">PARCONAZOLE (GEEL)</td>
+													<td>100</td>
+													<td align="left">C459339</td>
+													<td align="left">09-Jan-20</td>
+													<td align="left">16-May-16</td>
+													<td align="right">506</td>
+													<td>U</td>
+													<td align="right">12.000</td>
+													<td>KG</td>
+													<td align="right">96009.25</td>
+													<td>GBP</td>
+													<td align="left">OK</td>
+												</tr>
+												<tr>
+													<td align="left">Primary &amp; Functional review confirmed</td>
+													<td align="left">0751</td>
+													<td>A72</td>
+													<td>HALB</td>
+													<td align="left">QA540H01</td>
+													<td align="left">ENILCONAZOLE</td>
+													<td>100</td>
+													<td align="left">C456367</td>
+													<td align="left">17-Jan-18</td>
+													<td align="left">07-Mar-16</td>
+													<td align="right">576</td>
+													<td>U</td>
+													<td align="right">7.000</td>
+													<td>KG</td>
+													<td align="right">73915.49</td>
+													<td>GBP</td>
+													<td align="left">OK</td>
+												</tr>
+												<tr>
+													<td align="left">Primary &amp; Functional review confirmed</td>
+													<td align="left">0751</td>
+													<td>A72</td>
+													<td>HALB</td>
+													<td align="left">QA540H01</td>
+													<td align="left">ENILCONAZOLE</td>
+													<td>100</td>
+													<td align="left">C454462</td>
+													<td align="left">16-Jan-18</td>
+													<td align="left">07-Mar-16</td>
+													<td align="right">576</td>
+													<td>U</td>
+													<td align="right">7.000</td>
+													<td>KG</td>
+													<td align="right">73780.61</td>
+													<td>GBP</td>
+													<td align="left">OK</td>
+												</tr>
+												<tr>
+													<td align="left">Primary &amp; Functional review confirmed</td>
+													<td align="left">0751</td>
+													<td>A72</td>
+													<td>HALB</td>
+													<td align="left">QA540H01</td>
+													<td align="left">ENILCONAZOLE</td>
+													<td>100</td>
+													<td align="left">C453981</td>
+													<td align="left">15-Jan-18</td>
+													<td align="left">27-Jun-17</td>
+													<td align="right">99</td>
+													<td>U</td>
+													<td align="right">6.371</td>
+													<td>KG</td>
+													<td align="right">31403.90</td>
+													<td>GBP</td>
+													<td align="left">OK</td>
+												</tr>
+												<tr>
+													<td align="left">Primary &amp; Functional review confirmed</td>
+													<td align="left">0751</td>
+													<td>A72</td>
+													<td>HALB</td>
+													<td align="left">QA540H01</td>
+													<td align="left">ENILCONAZOLE</td>
+													<td>100</td>
+													<td align="left">C453796</td>
+													<td align="left">14-Jan-18</td>
+													<td align="left">07-Mar-16</td>
+													<td align="right">576</td>
+													<td>U</td>
+													<td align="right">7.000</td>
+													<td>KG</td>
+													<td align="right">75474.92</td>
+													<td>GBP</td>
+													<td align="left">OK</td>
+												</tr>
+												<tr>
+													<td align="left">Primary &amp; Functional review confirmed</td>
+													<td align="left">0751</td>
+													<td>A72</td>
+													<td>HALB</td>
+													<td align="left">QA540H01EX</td>
+													<td align="left">ENILCONAZOLE METAL VESSEL</td>
+													<td>100</td>
+													<td align="left">C451701</td>
+													<td align="left">19-Jan-18</td>
+													<td align="left">07-Mar-16</td>
+													<td align="right">576</td>
+													<td>U</td>
+													<td align="right">7.000</td>
+													<td>KG</td>
+													<td align="right">63665.11</td>
+													<td>GBP</td>
+													<td align="left">OK</td>
+												</tr>
+												<tr>
+													<td align="left">Primary &amp; Functional review confirmed</td>
+													<td align="left">0751</td>
+													<td>A72</td>
+													<td>HALB</td>
+													<td align="left">QA540H01</td>
+													<td align="left">ENILCONAZOLE</td>
+													<td>100</td>
+													<td align="left">C449664</td>
+													<td align="left">11-Jan-18</td>
+													<td align="left">07-Mar-16</td>
+													<td align="right">576</td>
+													<td>U</td>
+													<td align="right">7.000</td>
+													<td>KG</td>
+													<td align="right">67453.00</td>
+													<td>GBP</td>
+													<td align="left">OK</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="tab-pane fade" id="review">
+						<div class="row">
+							<div class="col-sm-12">
+								<div class="white-box">
+									<div class="table-responsive">
+										<table class="table">
+											<tbody>
+												<tr>
+													<th><span style="width:245px;display:block;">Name</span></th>
+													<th>Plant</th>
+													<th>Ctlr</th>
+													<th>Type</th>
+													<th>Material</th>
+													<th>Description</th>
+													<th>INV_LOCATION</th>
+													<th>Batch</th>
+													<th>Expiry/Creation</th>
+													<th><span style="width:70px;display:block;">Last</span></th>
+													<th>Moved</th>
+													<th>Days</th>
+													<th>Status</th>
+													<th>Qty</th>
+													<th>UOM</th>
+													<th>Value</th>
+													<th>Curr</th>
+												</tr>
+											
+												<tr>
+													<td align="left">Primary &amp; Functional review confirmed</td>
+													<td align="left">0751</td>
+													<td>A72</td>
+													<td>HALB</td>
+													<td align="left">QA540Q02</td>
+													<td align="left">FLUBENDAZOLE</td>
+													<td>18</td>
+													<td align="left">C767796</td>
+													<td align="left">13-Jul-19</td>
+													<td align="left">02-May-17</td>
+													<td align="right">155</td>
+													<td>Q</td>
+													<td align="right">6.000</td>
+													<td>KG</td>
+													<td align="right">31971.50</td>
+													<td>GBP</td>
+													<td align="left">OK</td>
+												</tr>
+												<tr>
+													<td align="left">Primary &amp; Functional review confirmed</td>
+													<td align="left">0751</td>
+													<td>A72</td>
+													<td>HALB</td>
+													<td align="left">QA540H01</td>
+													<td align="left">ENILCONAZOLE</td>
+													<td>100</td>
+													<td align="left">C460185</td>
+													<td align="left">17-Jan-18</td>
+													<td align="left">07-Mar-16</td>
+													<td align="right">576</td>
+													<td>U</td>
+													<td align="right">7.000</td>
+													<td>KG</td>
+													<td align="right">73891.28</td>
+													<td>GBP</td>
+													<td align="left">OK</td>
+												</tr>
+												<tr>
+													<td align="left">Primary &amp; Functional review confirmed</td>
+													<td align="left">0751</td>
+													<td>A52</td>
+													<td>HALB</td>
+													<td align="left">QA540N25KFF</td>
+													<td align="left">PARCONAZOLE (GEEL)</td>
+													<td>100</td>
+													<td align="left">C459339</td>
+													<td align="left">09-Jan-20</td>
+													<td align="left">16-May-16</td>
+													<td align="right">506</td>
+													<td>U</td>
+													<td align="right">12.000</td>
+													<td>KG</td>
+													<td align="right">96009.25</td>
+													<td>GBP</td>
+													<td align="left">OK</td>
+												</tr>
+												<tr>
+													<td align="left">Primary &amp; Functional review confirmed</td>
+													<td align="left">0751</td>
+													<td>A72</td>
+													<td>HALB</td>
+													<td align="left">QA540H01</td>
+													<td align="left">ENILCONAZOLE</td>
+													<td>100</td>
+													<td align="left">C456367</td>
+													<td align="left">17-Jan-18</td>
+													<td align="left">07-Mar-16</td>
+													<td align="right">576</td>
+													<td>U</td>
+													<td align="right">7.000</td>
+													<td>KG</td>
+													<td align="right">73915.49</td>
+													<td>GBP</td>
+													<td align="left">OK</td>
+												</tr>
+												<tr>
+													<td align="left">Primary &amp; Functional review confirmed</td>
+													<td align="left">0751</td>
+													<td>A72</td>
+													<td>HALB</td>
+													<td align="left">QA540H01</td>
+													<td align="left">ENILCONAZOLE</td>
+													<td>100</td>
+													<td align="left">C454462</td>
+													<td align="left">16-Jan-18</td>
+													<td align="left">07-Mar-16</td>
+													<td align="right">576</td>
+													<td>U</td>
+													<td align="right">7.000</td>
+													<td>KG</td>
+													<td align="right">73780.61</td>
+													<td>GBP</td>
+													<td align="left">OK</td>
+												</tr>
+												<tr>
+													<td align="left">Primary &amp; Functional review confirmed</td>
+													<td align="left">0751</td>
+													<td>A72</td>
+													<td>HALB</td>
+													<td align="left">QA540H01</td>
+													<td align="left">ENILCONAZOLE</td>
+													<td>100</td>
+													<td align="left">C453981</td>
+													<td align="left">15-Jan-18</td>
+													<td align="left">27-Jun-17</td>
+													<td align="right">99</td>
+													<td>U</td>
+													<td align="right">6.371</td>
+													<td>KG</td>
+													<td align="right">31403.90</td>
+													<td>GBP</td>
+													<td align="left">OK</td>
+												</tr>
+												<tr>
+													<td align="left">Primary &amp; Functional review confirmed</td>
+													<td align="left">0751</td>
+													<td>A72</td>
+													<td>HALB</td>
+													<td align="left">QA540H01</td>
+													<td align="left">ENILCONAZOLE</td>
+													<td>100</td>
+													<td align="left">C453796</td>
+													<td align="left">14-Jan-18</td>
+													<td align="left">07-Mar-16</td>
+													<td align="right">576</td>
+													<td>U</td>
+													<td align="right">7.000</td>
+													<td>KG</td>
+													<td align="right">75474.92</td>
+													<td>GBP</td>
+													<td align="left">OK</td>
+												</tr>
+												<tr>
+													<td align="left">Primary &amp; Functional review confirmed</td>
+													<td align="left">0751</td>
+													<td>A72</td>
+													<td>HALB</td>
+													<td align="left">QA540H01EX</td>
+													<td align="left">ENILCONAZOLE METAL VESSEL</td>
+													<td>100</td>
+													<td align="left">C451701</td>
+													<td align="left">19-Jan-18</td>
+													<td align="left">07-Mar-16</td>
+													<td align="right">576</td>
+													<td>U</td>
+													<td align="right">7.000</td>
+													<td>KG</td>
+													<td align="right">63665.11</td>
+													<td>GBP</td>
+													<td align="left">OK</td>
+												</tr>
+												<tr>
+													<td align="left">Primary &amp; Functional review confirmed</td>
+													<td align="left">0751</td>
+													<td>A72</td>
+													<td>HALB</td>
+													<td align="left">QA540H01</td>
+													<td align="left">ENILCONAZOLE</td>
+													<td>100</td>
+													<td align="left">C449664</td>
+													<td align="left">11-Jan-18</td>
+													<td align="left">07-Mar-16</td>
+													<td align="right">576</td>
+													<td>U</td>
+													<td align="right">7.000</td>
+													<td>KG</td>
+													<td align="right">67453.00</td>
+													<td>GBP</td>
+													<td align="left">OK</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<footer class="footer text-center">Version: 2.3 Deployed: 14-May-2018 Instance: Test - TST1221</footer>
+		</div>
+	</div>
+	<script src="./js/jquery.min.js"></script>
+	<script src="./js/bootstrap.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$('.menu-icon').click(function(){
+				$('.fix-header').toggleClass('menu');
+			});
+		});
+	</script>
+</body>
+</html>

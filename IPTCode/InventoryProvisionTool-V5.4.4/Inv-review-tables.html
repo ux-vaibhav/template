@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Inventory Provision Tool (IPT)</title>
+	<link href="css/vendor/bootstrap.min.css" rel="stylesheet">
+	<link href="css/vendor/multiselect.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+</head>
+
+<body class="fix-header">
+	<div>
+		<nav class="navbar navbar-static-top blue-navbar">
+			<div class="navbar-header flex">
+				<div class="top-left-part ">
+					<a class="d-flex" href="inventory-review.html">
+						<img src="./img/elanco.svg" />
+						<div class="title-text">Inventory Provision <span> Tool (IPT)</span>
+						</div>
+					</a>
+				</div>
+				<div class="top-right-part">
+					<div id="menu-icon" class="pull-right menu-icon"> <span></span><span></span><span></span>
+					</div>
+					<div class="user-info pull-right"> <span>Welcome, Vijay Bansal</span>
+						<div class="user-info-box">
+							<ul class="list-unstyled">
+								<li><a href="javascript:void(0)">Site: Liverpool</a>
+								</li>
+								<li><a href="javascript:void(0)">Role: SA, WA, DS</a>
+								</li>
+								<li><a href="javascript:void(0)">Instance: Development (DEV1221)</a>
+								</li>
+								<li><a href="javascript:void(0)">Sign out</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</nav>
+		<div class="sidebar">
+			<ul class="list-unstyled">
+				<li> <a href="javascript:void(0)" class="link">Inventory Review</a>
+					<div class="sub-nav">
+						<div class="cls"> <span></span>
+							<span></span>
+							<span></span>
+						</div>
+						<div class="page-link"><a href="inventory-review.html" class="link">Inventory Review</a>
+						</div>
+						<ul class="list-unstyled">
+							<li><a href="frequency-review-2.html" class="link">Frequency Review</a>
+							</li>
+							<li><a href="slow-moving-inventory.html" class="link">Slow moving Inventory</a>
+							</li>
+							<li> <a href="manual-fail.html" class="link"> Manual Fail </a>
+							</li>
+							<li> <a href="javascript:void(0)" class="link">Upload</a>
+								<div class="sub-nav">
+									<div class="cls"> <span></span>
+										<span></span>
+										<span></span>
+									</div>
+									<div class="page-link"><a href="javascript:void(0)" class="link">Upload</a>
+									</div>
+									<ul class="list-unstyled">
+										<li><a href="" class="link">B/F Previous</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li><span class="link" data-toggle="modal" data-target="#email-box">Email</span>
+							</li>
+						</ul>
+					</div>
+				</li>
+				<li> <a href="javascript:void(0)" class="link">System Parameters</a>
+					<div class="sub-nav">
+						<div class="cls pull-right"> <span></span>
+							<span></span>
+							<span></span>
+						</div>
+						<div class="page-link"><a href="javascript:void(0)" class="link">System Parameters</a>
+						</div>
+						<ul class="list-unstyled">
+							<li><a href="frequency-review.html" class="link">Frequency Review</a>
+							</li>
+							<li><a href="Controllers.html" class="link">Controllers</a>
+							</li>
+							<li><a href="Category.html" class="link">Categories</a>
+							</li>
+							<li><a href="financial-filters.html" class="link">Financial Filters
+                           </a>
+							</li>
+							<li><a href="Business-Area.html" class="link">Business Area
+                           </a>
+							</li>
+							<li><a href="Plant.html" class="link">Plants
+                           </a>
+							</li>
+							<li><a href="Inv-review-tables.html" class="link">Inv Review Tables
+                           </a>
+							</li>
+							<li><a href="Access-roles.html" class="link">Access Roles
+                           </a>
+							</li>
+							<li><a href="Class-accounts.html" class="link">Class Accounts
+                           </a>
+							</li>
+							<li><a href="Materials.html" class="link">Materials
+                           </a>
+							</li>
+						</ul>
+					</div>
+				</li>
+				<li> <a href="javascript:void(0)" class="link">System Admin</a>
+					<div class="sub-nav">
+						<div class="cls pull-right"> <span></span>
+							<span></span>
+							<span></span>
+						</div>
+						<div class="page-link"><a href="system-admin.html" class="link">System Admin</a>
+						</div>
+						<ul class="list-unstyled">
+							<li><a href="Site-maintenance.html" class="link">Site Maintenance</a>
+							</li>
+							<li><a href="Assign-security.html" class="link">Assign Security</a>
+							</li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<main class="main">
+			<div class="container-fluid">
+				<div class="col-md-12 white-box rel-box">
+					<h2>
+                    Inv Review Tables
+                  </h2>
+					<form>
+						<div class="form-group">
+							<div class="row">
+								<div class="col-xs-3">
+									<input type="text" id="table-search" class="form-control" placeholder="Search" />
+								</div>
+								<button class="btn tablezoom pull-right" type="button">Table Magnify
+									<img src="./img/magnifying-glass.png" />
+								</button>
+							</div>
+						</div>
+					</form>
+					<div class="table-responsive">
+						<table class="table" id="ControllerTable">
+							<thead>
+								<tr>
+									<th>Column</th>
+									<th>Display</th>
+									<th>Heading</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>PREV_PROVIDED_FOR</td>
+									<td>
+										<input type="checkbox">
+									</td>
+									<td>Prev Provided</td>
+								</tr>
+								<tr>
+									<td>PLANT</td>
+									<td>
+										<input type="checkbox">
+									</td>
+									<td>Plant</td>
+								</tr>
+								<tr>
+									<td>MRP_CTLR</td>
+									<td>
+										<input type="checkbox">
+									</td>
+									<td>Ctlr</td>
+								</tr>
+								<tr>
+									<td>MATERIAL_TYPE</td>
+									<td>
+										<input type="checkbox">
+									</td>
+									<td>Type</td>
+								</tr>
+								<tr>
+									<td>MATERIAL</td>
+									<td>
+										<input type="checkbox">
+									</td>
+									<td>Material</td>
+								</tr>
+								<tr>
+									<td>DESCRIPTION</td>
+									<td>
+										<input type="checkbox">
+									</td>
+									<td>Description</td>
+								</tr>
+								<tr>
+									<td>INV_LOCATION</td>
+									<td>
+										<input type="checkbox">
+									</td>
+									<td>INV_LOCATION</td>
+								</tr>
+								<tr>
+									<td>BATCH_NO</td>
+									<td>
+										<input type="checkbox">
+									</td>
+									<td>Batch</td>
+								</tr>
+								<tr>
+									<td>EXTRACT_DATE</td>
+									<td>
+										<input type="checkbox">
+									</td>
+									<td>Expiry/Creation</td>
+								</tr>
+								<tr>
+									<td>DATE_TYPE</td>
+									<td>
+										<input type="checkbox">
+									</td>
+									<td>Type</td>
+								</tr>
+								<tr>
+									<td>INVENTORY_CATEGORY</td>
+									<td>
+										<input type="checkbox">
+									</td>
+									<td>Cat</td>
+								</tr>
+								<tr>
+									<td>LAST_MOVE_DATE</td>
+									<td>
+										<input type="checkbox">
+									</td>
+									<td>Last Moved</td>
+								</tr>
+								<tr>
+									<td>LAST_MOVE_DAYS</td>
+									<td>
+										<input type="checkbox">
+									</td>
+									<td>Days</td>
+								</tr>
+								<tr>
+									<td>MOVEMENT_TYPE</td>
+									<td>
+										<input type="checkbox">
+									</td>
+									<td>Move Type</td>
+								</tr>
+								<tr>
+									<td>INVENTORY_STATUS</td>
+									<td>
+										<input type="checkbox">
+									</td>
+									<td>Status</td>
+								</tr>
+								<tr>
+									<td>QUANTITY</td>
+									<td>
+										<input type="checkbox">
+									</td>
+									<td>Qty</td>
+								</tr>
+								<tr>
+									<td>UOM</td>
+									<td>
+										<input type="checkbox">
+									</td>
+									<td>UOM</td>
+								</tr>
+								<tr>
+									<td>INVENTORY_VALUE</td>
+									<td>
+										<input type="checkbox">
+									</td>
+									<td>Value</td>
+								</tr>
+								<tr>
+									<td>CURRENCY</td>
+									<td>
+										<input type="checkbox">
+									</td>
+									<td>Curr</td>
+								</tr>
+								<tr>
+									<td>STOCK</td>
+									<td>
+										<input type="checkbox">
+									</td>
+									<td>STOCK</td>
+								</tr>
+								<tr>
+									<td>BOM</td>
+									<td>
+										<input type="checkbox">
+									</td>
+									<td>BOM</td>
+								</tr>
+								<tr>
+									<td>PROFIT_CENTER</td>
+									<td>
+										<input type="checkbox">
+									</td>
+									<td>PROFIT_CENTER</td>
+								</tr>
+								<tr>
+									<td>CATEGORY_ASSIGN</td>
+									<td>
+										<input type="checkbox">
+									</td>
+									<td>Cat Assigned</td>
+								</tr>
+								<tr>
+									<td>PROVIDED_FOR</td>
+									<td>
+										<input type="checkbox">
+									</td>
+									<td>PROVIDE_FOR</td>
+								</tr>
+								<tr>
+									<td>LAST_UPDATED</td>
+									<td>
+										<input type="checkbox">
+									</td>
+									<td>LAST_UPDATED</td>
+								</tr>
+								<tr>
+									<td>UPDATED_BY</td>
+									<td>
+										<input type="checkbox">
+									</td>
+									<td>UPDATED_BY</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer class="footer text-center d-flex">
+			<div>Copyright © 2020 Elanco. All rights reserved.</div>
+			<div>Version: 2.3 Deployed: 14-May-2018</div>
+		</footer>
+	</div>
+	<div class="disabled"></div>
+	<script src="./js/jquery.min.js"></script>
+	<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.js"></script>
+	<script src="./js/bootstrap.min.js"></script>
+	<script src="./js/parsley.min.js"></script>
+	<script src="./js/main.js"></script>
+	<script>
+		$('#ControllerTable').DataTable({
+		         "sDom":"ltipr",
+		         "lengthChange": false
+		      });
+		      var oTable = $('#ControllerTable').DataTable(); 
+		      $('#table-search').keyup(function(){
+		      oTable.search($(this).val(), true, false).draw() ;
+		})
+	</script>
+</body>
+
+</html>

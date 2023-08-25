@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Inventory Provision Tool (IPT)</title>
+	<link href="css/vendor/bootstrap.min.css" rel="stylesheet">
+	<link href="css/vendor/multiselect.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+</head>
+
+<body class="fix-header">
+	<div>
+		<nav class="navbar navbar-static-top blue-navbar">
+			<div class="navbar-header flex">
+				<div class="top-left-part ">
+					<a class="d-flex" href="inventory-review.html">
+						<div class="title-text">Vaibhav Panchal</div>
+					</a>
+				</div>
+				<div class="top-right-part">
+					<div id="menu-icon" class="pull-right menu-icon"> <span></span><span></span><span></span>
+					</div>
+					<!-- <div class="user-info pull-right select-site"> 
+						<div class="info-open"><span>Liverpool</span> <i class="info-icon"></i></div>
+					<div class="user-info-box">
+						<ul class="list-unstyled">
+								<li>
+									<select>
+										<option>Liverpool</option>
+											<option>Indonesia</option>
+									</select>
+								</li>
+							<li><a href="javascript:void(0)">Role: SA, WA, DS</a>
+							</li>
+							<li><a href="javascript:void(0)">Instance: Development (DEV1221)</a>
+							</li>
+							<li><a href="javascript:void(0)">Sign out</a>
+							</li>
+						</ul>
+					</div>
+					</div> -->
+					<div class="user-info pull-right"> <span></span>
+						
+					</div>
+				</div>
+			</div>
+		</nav>
+		<div class="sidebar">
+			<ul class="list-unstyled">
+				<li> <a href="javascript:void(0)" class="link">Inventory Review</a>
+					<div class="sub-nav">
+						<div class="cls"> <span></span>
+							<span></span>
+							<span></span>
+						</div>
+						<div class="page-link"><a href="inventory-review.html" class="link">Inventory Review</a>
+						</div>
+						<ul class="list-unstyled">
+							<li><a href="frequency-review-2.html" class="link">Frequency Review</a>
+							</li>
+							<li><a href="slow-moving-inventory.html" class="link">Slow moving Inventory</a>
+							</li>
+							<li> <a href="manual-fail.html" class="link"> Manual Fail </a>
+							</li>
+							<li> <a href="javascript:void(0)" class="link">Upload</a>
+								<div class="sub-nav">
+									<div class="cls"> <span></span>
+										<span></span>
+										<span></span>
+									</div>
+									<div class="page-link"><a href="javascript:void(0)" class="link">Upload</a>
+									</div>
+									<ul class="list-unstyled">
+										<li><a href="" class="link">B/F Previous</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li><span class="link" data-toggle="modal" data-target="#email-box">Email</span></li>
+						</ul>
+					</div>
+				</li>
+				<li> <a href="javascript:void(0)" class="link">System Parameters</a>
+					<div class="sub-nav">
+						<div class="cls pull-right"> <span></span>
+							<span></span>
+							<span></span>
+						</div>
+						<div class="page-link"><a href="javascript:void(0)" class="link">System Parameters</a>
+						</div>
+						<ul class="list-unstyled">
+							<li><a href="frequency-review.html" class="link">Frequency Review</a>
+							</li>
+							<li><a href="Controllers.html" class="link">Controllers</a>
+							</li>
+							<li><a href="Category.html" class="link">Categories</a>
+							</li>
+							<li><a href="financial-filters.html" class="link">Financial Filters
+                           </a>
+							</li>
+							<li><a href="Business-Area.html" class="link">Business Area
+                           </a>
+							</li>
+							<li><a href="Plant.html" class="link">Plants
+                           </a>
+							</li>
+							<li><a href="Inv-review-tables.html" class="link">Inv Review Tables
+                           </a>
+							</li>
+							<li><a href="Access-roles.html" class="link">Access Roles
+                           </a>
+							</li>
+							<li><a href="Class-accounts.html" class="link">Class Accounts
+                           </a>
+							</li>
+							<li><a href="Materials.html" class="link">Materials
+                           </a>
+							</li>
+						</ul>
+					</div>
+				</li>
+				<li> <a href="javascript:void(0)" class="link">System Admin</a>
+					<div class="sub-nav">
+						<div class="cls pull-right"> <span></span>
+							<span></span>
+							<span></span>
+						</div>
+						<div class="page-link"><a href="system-admin.html" class="link">System Admin</a>
+						</div>
+						<ul class="list-unstyled">
+							<li><a href="Site-maintenance.html" class="link">Site Maintenance</a>
+							</li>
+							<li><a href="Assign-security.html" class="link">Assign Security</a>
+							</li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<main class="main">
+			<div class="container-fluid">
+				<div class="col-xs-12 col-sm-3 col-md-2 pdl-0 filter-container">
+					<div class="filter white-box">
+						<div class="profile-info">
+						<img src="img/profile.jpg"/>
+						<h2>Vaibhav Panchal</h2>
+						 <p>Front End Developer</p>
+						 <p>999 855 7779</p>
+						 </div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-9 col-md-10 rel-box tab-container" >
+				
+				
+					<div class="row">
+						<ul class="nav nav-tabs flex two-tabs" role="tablist">
+							<li class="active">
+								<a href="#maintenance" role="tab" data-toggle="tab">
+									<h3 class="box-title">Experience</h3>
+								</a>
+							</li>
+							<li>
+								<a href="#review" role="tab" data-toggle="tab">
+									<h3 class="box-title">Education</h3>
+								</a>
+							</li>
+						</ul>
+						<div class="tab-content">
+							<div class="tab-pane fade active in" id="maintenance">
+								<div class="row">
+									<div class="col-sm-12">
+										<div class="white-box">
+											<div class="table-responsive">
+												<table class="table">
+													<thead>
+														<tr>
+															<th><span>Company</span>
+															</th>
+															<th>Experience</th>
+															<th>Location</th>
+															<th>Employees</th>
+															<th>CMMI Level</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td class="table-action">
+																<button class="btn select red" data-cat="red" type="button">
+																	<img src="img/right-arrow.png" class="right-arrow" />
+																</button>
+															</td>
+													 		<!-- <td>Primary &amp; Functional review confirmed</td> -->
+															<td>0751</td>
+															<td>A72</td>
+															<td>HALB</td>
+															<td>QA540Q02</td>
+														
+															
+														</tr>
+													
+													</tbody>
+												</table>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="tab-pane fade" id="review">
+								<div class="row">
+									<div class="col-sm-12">
+										<div class="white-box">
+											
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!---Batch details form-->
+						<div class="detail-form">
+							<div class="white-box">
+								<div class="cls pull-right"><span></span>  <span></span>
+								</div>
+								<h2>Selected Batch : C460185 QA540H01 ENILCONAZOLE</h2>
+								<form>
+									<div class="form-group flex radio-sec">
+										<label>Provide for</label>
+										<label>
+											<input type="radio" name="optradio" class="provide-for-yes" checked>Yes</label>
+										<label>
+											<input type="radio" name="optradio" class="provide-for-no">No</label>
+										<div class="value">
+											<label>Value %</label>
+											<select class="form-control">
+												<option>100</option>
+												<option>75</option>
+												<option>50</option>
+												<option>25</option>
+											</select>
+										</div>
+										<div class="tool-tip">
+											<img src="img/tooltip.png" />
+											<div class="tool-tip-table table-responsive">
+												<table class="table">
+													<tbody>
+														<tr>
+															<th style="width: 100px;">Value %</th>
+															<th>Original Quantity</th>
+															<th>Revised Quantity</th>
+															<th>Original Value</th>
+															<th>Revised Value</th>
+														</tr>
+														<tr>
+															<td align="center">100</td>
+															<td align="right">100.00</td>
+															<td align="right">100.00</td>
+															<td align="right">10,000.00</td>
+															<td align="right">10,000.00</td>
+														</tr>
+														<tr>
+															<td align="center">75</td>
+															<td align="right">100.00</td>
+															<td align="right">75.00</td>
+															<td align="right">10,000.00</td>
+															<td align="right">7,500.00</td>
+														</tr>
+														<tr>
+															<td align="center">50</td>
+															<td align="right">100.00</td>
+															<td align="right">50.00</td>
+															<td align="right">10,000.00</td>
+															<td align="right">5,000.00</td>
+														</tr>
+														<tr>
+															<td align="center">25</td>
+															<td align="right">100.00</td>
+															<td align="right">25.00</td>
+															<td align="right">10,000.00</td>
+															<td align="right">2,500.00</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</div>
+									</div>
+									<div class="form-group">
+										<label for="sel1">Category</label>
+										<select class="form-control" id="sel1">
+											<option>Customer Services</option>
+											<option>Destruction</option>
+											<option>Inventory review meeting to discuss</option>
+											<option>MS&T to advise</option>
+											<option>Rationalisation Project</option>
+											<option>Scheduling for future production</option>
+											<option>Return to Vendor</option>
+										</select>
+									 </div> <!--<span class="form-group info"> -->
+                              <!-- Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis d -->
+                              <!-- </span> -->
+									<div class="form-group">
+										<button type="button" class="btn ">Confirm</button>
+									</div>
+									<div class="form-group">
+										<label for="comment">Enter your Comment and click 'Insert' to add your Comment</label>
+										<textarea class="form-control" rows="5" id="comment"></textarea>
+									</div>
+									<div class="form-group d-flex">
+										<button type="button" class="btn ">Insert</button>
+										<button type="button" class="btn ">Copy last</button>
+										<button type="button" class="btn " data-toggle="modal" data-target="#apply-comments">Apply Comments to Batch</button>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="white-box col-sm-6">
+							<h2>About Me</h2>
+							<p>I am a goal oriented, motivated and a fast learning individual. I strive for challenges in workplace and I believe in learning constantly in order to keep myself updated with everyday changes in the field of Information and Technology. If there is one thing I know… it's that I don't know everything… but I'm working on that…</p>
+						</div>
+						<div class="col-sm-6">
+							<div class="white-box">
+							<h2>Experience</h2>
+							<p><strong>IT Analyst</strong>
+								Nov 2018 – Present | Confidential
+								Gujarat, India</p>
+								<p>
+									Software Engineer
+Oct 2016 – Nov 2018 | Cybage Software
+
+Gandhi Nagar, Gujarat, India</p>
+<p>
+Front End Developer
+Feb 2016 – Sep 2016 | Brainvire Infotech Inc
+
+Ahmedabad Area, India</p>
+<p>
+Web Designer
+Aug 2014 – Feb 2016 | Cygnet Infotech Pvt. Ltd
+
+Ahmedabad Area, India
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer class="footer text-center d-flex">
+			<div>Copyright © 2020 Elanco. All rights reserved.</div>
+			<div>Version: 3.0 Deployed: 26-June-2020</div>
+		</footer>
+	</div>
+	<!---Mail dialog-->
+	<div class="modal fade" id="email-box" tabindex="-1" role="dialog" aria-labelledby="email-box" aria-hidden="true">
+		<div class="modal-content form-box large-box">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span>
+				</button>
+				<h4 class="modal-title" id="myModalLabel">Email</h4>
+			</div>
+			<div class="modal-body">
+				<!-- <div class="form-group"> -->
+					<!-- <label for="to">To</label> -->
+					<!-- <input type="text" class="form-control"> -->
+				<!-- </div> -->
+				<div class="form-group">
+					<label for="to">Subject</label>
+					<input type="text" class="form-control" value="Pre-populated subject">
+				</div>
+				<div class="form-group">
+					<label for="to">Message</label>
+					<textarea class="form-control" rows="5" id="message">Pre-populated email content</textarea>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<div class="modal-action">
+					<button type="button" class="btn">Send</button>
+					<button type="button" class="btn" data-dismiss="modal">Cancel</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!---Assign-box dialog-->
+	<div class="modal fade" id="assign-box" tabindex="-1" role="dialog" aria-labelledby="assign-box" aria-hidden="true">
+		<div class="modal-content form-box">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span>
+				</button>
+				<h4 class="modal-title" id="myModalLabel">Assign Controllers</h4>
+			</div>
+			<div class="modal-body">
+				<div class="form-group">
+					<input type="text" class="form-control" />
+				</div>
+				<div class="table-responsive">
+					<table class="table">
+						<thead>
+							<tr>
+								<th style="width:30px"><span><input class="check" type="checkbox"/></span>
+								</th>
+								<th>Select all</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>
+									<input class="check" type="checkbox" />
+								</td>
+								<td>0721</td>
+							</tr>
+							<tr>
+								<td>
+									<input class="check" type="checkbox" />
+								</td>
+								<td>0722</td>
+							</tr>
+							<tr>
+								<td>
+									<input class="check" type="checkbox" />
+								</td>
+								<td>0723</td>
+							</tr>
+							<tr>
+								<td>
+									<input class="check" type="checkbox" />
+								</td>
+								<td>0724</td>
+							</tr>
+							<tr>
+								<td>
+									<input class="check" type="checkbox" />
+								</td>
+								<td>0725</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<div class="modal-action">
+					<button type="button" class="btn">Assign</button>
+					<button type="button" class="btn" data-dismiss="modal">Cancel</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!---Apply-Comments dialog-->
+	<div class="modal fade" id="apply-comments" tabindex="-1" role="dialog" aria-labelledby="apply-comments" aria-hidden="true">
+		<div class="modal-content form-box">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span>
+				</button>
+				<h4 class="modal-title" id="myModalLabel">Apply Comments to batch</h4>
+			</div>
+			<div class="modal-body">
+				<div class="form-group">					
+					<input type="text" class="form-control" />
+				</div>
+				<table class="table">
+					<tbody>
+						<tr>
+							<td>
+								<input class="check" type="checkbox" />
+							</td>							
+							<th>Batch</th>
+						</tr>
+						<tr>
+							<td>
+								<input class="check" type="checkbox" />
+							</td>
+							<!-- <td>0751</td> -->
+							<td>1605056</td>
+						</tr>
+						<tr>
+							<td>
+								<input class="check" type="checkbox" />
+							</td>
+							<!-- <td>071</td> -->
+							<td>1605050</td>
+						</tr>
+						<tr>
+							<td>
+								<input class="check" type="checkbox" />
+							</td>
+							<!-- <td>051</td> -->
+							<td>K-4072020</td>
+						</tr>
+						<tr>
+							<td>
+								<input class="check" type="checkbox" />
+							</td>
+							<!-- <td>0721</td> -->
+							<td>F000309C</td>
+						</tr>
+						<tr>
+							<td>
+								<input class="check" type="checkbox" />
+							</td>
+							<!-- <td>0721</td> -->
+							<td>F000610N</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="modal-footer">
+				<div class="modal-action">
+					<button type="button" class="btn">Apply</button>
+					<button type="button" class="btn" data-dismiss="modal">Cancel</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="disabled"></div>
+	<script src="./js/jquery.min.js"></script>
+	<script src="./js/bootstrap.min.js"></script>
+	<script src="./js/parsley.min.js"></script>
+	<script src="./js/multiselect.min.js"></script>
+	<script src="./js/main.js"></script>
+	<script>
+		$('.multibox').multiselect();
+		         $('.multiselect-input').on('click', function() {
+		            $(this).css("background", "#fff");
+		         });
+		         $('.multiselect-input').on('focusout', function() {
+		            $(this).css("background", "transparent");
+		         });
+		         $('.provide-for-no').click(function () {
+		         $(this).parent().parent().find('.value').hide();
+		         });
+		         $('.provide-for-yes').click(function () {
+		         $(this).parent().parent().find('.value').show();
+		         });
+				 $(".user-info-box select").change(function () {
+					 $('.select-site div span').html($(this).children("option:selected").val());
+				 });
+	</script>
+</body>
+
+</html>
